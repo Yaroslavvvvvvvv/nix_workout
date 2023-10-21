@@ -10,6 +10,15 @@ export default {
             fontFamily: {
                 libre: ['Libre Baskerville', 'serif'],
             },
+            backgroundImage: {
+                'bg_img': "url('./assets/images/about_img.jpg')"
+            },
+            extend: {
+                'bg-bg_img': {
+                    maxWidth: '100%',
+
+                }
+            }
         },
     },
     plugins: [require('tailwindcss-animated'), require('flowbite/plugin')],
