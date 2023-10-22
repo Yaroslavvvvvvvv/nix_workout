@@ -3,8 +3,9 @@ export default {
     content: [
         "./index.html",
         "./src/**/*.{vue,js,ts,jsx,tsx}",
-        "./node_modules/flowbite/**/*.js"
+        "./node_modules/flowbite/**/*.js",
     ],
+
     theme: {
         extend: {
             fontFamily: {
@@ -21,6 +22,6 @@ export default {
             }
         },
     },
-    plugins: [require('tailwindcss-animated'), require('flowbite/plugin')],
+    plugins: [require('tailwindcss-animated'),  require('flowbite/plugin')],
 }
 
