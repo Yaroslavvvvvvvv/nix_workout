@@ -7,7 +7,7 @@
     <div class="bg-cover bg-center sticky top-0 h-screen flex flex-col items-center justify-center bg-bg_img">
       <span
           class="animate-fade-down animate-duration-1000 animate-ease-linear text-center
-          text-xl lg:text-7xl md:text-5xl sm:text-4xl leading-none tracking-tight font-bold text-amber-300">
+          text-xl lg:text-7xl md:text-5xl sm:text-4xl leading-none tracking-tight font-bold text-gray-100/80">
         Calisthenics | Street workout brand
       </span>
     </div>
