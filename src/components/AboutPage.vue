@@ -4,55 +4,55 @@ const products = [
     id: 1,
     name: 'Турніки Настінні',
     about: '',
-    imageSrc: '/src/assets/images/products/bars_img.jpg',
+    imageSrc: '/images/products/bars_img.jpg',
   },
   {
     id: 2,
     name: 'Переносні Бруси',
     about: '',
-    imageSrc: '/src/assets/images/products/low_bars_img.jpg',
+    imageSrc: '/images/products/low_bars_img.jpg',
   },
   {
     id: 3,
     name: 'Стійка для елементів',
     about: '',
-    imageSrc: '/src/assets/images/products/stand_img.jpg',
+    imageSrc: '/images/products/stand_img.jpg',
   },
   {
     id: 4,
     name: 'Паралетси',
     about: '',
-    imageSrc: '/src/assets/images/products/paralets_img.jpg',
+    imageSrc: '/images/products/paralets_img.jpg',
   },
   {
     id: 5,
     name: 'Гумові і латексні петлі',
     about: '',
-    imageSrc: '/src/assets/images/products/rubber_img.jpg',
+    imageSrc: '/images/products/rubber_img.jpg',
   },
   {
     id: 6,
     name: 'Обважнювачі',
     about: '',
-    imageSrc: '/src/assets/images/products/gainers_img.jpg',
+    imageSrc: '/images/products/gainers_img.jpg',
   },
   {
     id: 7,
     name: 'Шкіряні накладки',
     about: '',
-    imageSrc: '/src/assets/images/products/linings_img.jpg',
+    imageSrc: '/images/products/linings_img.jpg',
   },
   {
     id: 8,
     name: 'Кистьові бинти',
     about: '',
-    imageSrc: '/src/assets/images/products/bandages_img.jpg',
+    imageSrc: '/images/products/bandages_img.jpg',
   },
   {
     id: 9,
     name: 'Магнезія',
     about: '',
-    imageSrc: '/src/assets/images/products/magnesium_img.jpg',
+    imageSrc: '/images/products/magnesium_img.jpg',
   },
 ]
 </script>
@@ -90,7 +90,7 @@ const products = [
     </div>
     <div class="sticky top-0 h-screen flex flex-col items-center justify-center bg-neutral-800 text-white">
       <h2 class="text-4xl">The Fourth Title</h2>
-      <img src="/src/assets/images/products/bars_img.jpg" alt="">
+      <img src='/images/products/stand_img.jpg' alt="">
     </div>
   </div>
 
