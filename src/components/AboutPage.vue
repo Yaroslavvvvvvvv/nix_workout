@@ -77,7 +77,6 @@ const products = [
                   :src="product.imageSrc"
                   alt="img"
                   class="relative z-40 object-cover w-full h-96 rounded-3xl"/>
-              <img src="../assets/images/bars.jpg" alt="">
             </div>
             <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
               <h2 class="mb-4 text-3xl xl:text-5xl lg:text-4xl md:text-5xl sm:text-5xl font-semibold text-black">{{product.name}}</h2>
