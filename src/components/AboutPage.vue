@@ -1,5 +1,60 @@
 <script setup>
-
+const products = [
+  {
+    id: 1,
+    name: 'Турніки Настінні',
+    about: '',
+    imageSrc: '../src/assets/images/products/bars.jpg',
+  },
+  {
+    id: 2,
+    name: 'Переносні Бруси',
+    about: '',
+    imageSrc: '../src/assets/images/products/low_bars.jpg',
+  },
+  {
+    id: 3,
+    name: 'Стійка для елементів',
+    about: '',
+    imageSrc: '../src/assets/images/products/stand.jpg',
+  },
+  {
+    id: 4,
+    name: 'Паралетси',
+    about: '',
+    imageSrc: '../src/assets/images/products/paralets.jpg',
+  },
+  {
+    id: 5,
+    name: 'Гумові і латексні петлі',
+    about: '',
+    imageSrc: '../src/assets/images/products/rubber.jpg',
+  },
+  {
+    id: 6,
+    name: 'Обважнювачі',
+    about: '',
+    imageSrc: '../src/assets/images/products/gainers.jpg',
+  },
+  {
+    id: 7,
+    name: 'Шкіряні накладки',
+    about: '',
+    imageSrc: '../src/assets/images/products/linings.jpg',
+  },
+  {
+    id: 8,
+    name: 'Кистьові бинти',
+    about: '',
+    imageSrc: '../src/assets/images/products/bandages.jpg',
+  },
+  {
+    id: 9,
+    name: 'Магнезія',
+    about: '',
+    imageSrc: '../src/assets/images/products/magnesium.jpg',
+  },
+]
 </script>
 
 <template>
@@ -7,191 +62,24 @@
     <div class="bg-cover bg-center sticky top-0 h-screen flex flex-col items-center justify-center bg-bg_img">
       <span
           class="animate-fade-down animate-duration-1000 animate-ease-linear text-center
-          text-xl lg:text-7xl md:text-5xl sm:text-4xl leading-none tracking-tight font-bold text-gray-100/80">
+          text-xl lg:text-7xl md:text-5xl sm:text-4xl leading-none tracking-tight font-bold text-gray-100/75">
         Calisthenics | Street workout brand
       </span>
     </div>
-    <div class="sticky top-0 h-screen flex flex-col items-center justify-center bg-gray-300">
+    <div
+        v-for="product in products" :key="product.id"
+        class="sticky top-0 h-screen flex flex-col items-center justify-center bg-gray-300">
       <div class="container my-24 mx-auto md:px-6">
         <div class="justify-center flex-1 max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
           <div class="flex flex-wrap">
             <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
               <img
-                  src="../assets/images/first.jpg"
+                  :src="product.imageSrc"
                   alt="img"
-                  class="relative z-40 object-cover w-full h-96 rounded-3xl"
-              />
+                  class="relative z-40 object-cover w-full h-96 rounded-3xl"/>
             </div>
             <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
-              <h2 class="mb-4 text-4xl font-semibold text-blue-500 dark:text-gray-300">Турніки Настінні</h2>
-              <p class="mb-10 text-base leading-7 text-gray-500 dark:text-gray-400 text-left">
-                {description}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="sticky top-0 h-screen flex flex-col items-center justify-center bg-gray-300 text-white">
-      <div class="container my-24 mx-auto md:px-6">
-        <div class="justify-center flex-1 max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
-          <div class="flex flex-wrap">
-            <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
-              <img
-                  src="../assets/images/fourth.png"
-                  alt="img"
-                  class="relative z-40 object-cover w-full h-96 rounded-3xl"
-              />
-            </div>
-            <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
-              <h2 class="mb-4 text-4xl font-semibold text-blue-500 dark:text-gray-300">Переносні Бруси</h2>
-              <p class="mb-10 text-base leading-7 text-gray-500 dark:text-gray-400 text-left">
-                {description}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="sticky top-0 h-screen flex flex-col items-center justify-center bg-gray-300">
-      <div class="container my-24 mx-auto md:px-6">
-        <div class="justify-center flex-1 max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
-          <div class="flex flex-wrap">
-            <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
-              <img
-                  src="../assets/images/first.jpg"
-                  alt="img"
-                  class="relative z-40 object-cover w-full h-96 rounded-3xl"
-              />
-            </div>
-            <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
-              <h2 class="mb-4 text-4xl font-semibold text-blue-500 dark:text-gray-300">Стійка для елементів</h2>
-              <p class="mb-10 text-base leading-7 text-gray-500 dark:text-gray-400 text-left">
-                {description}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="sticky top-0 h-screen flex flex-col items-center justify-center bg-gray-300 text-white">
-      <div class="container my-24 mx-auto md:px-6">
-        <div class="justify-center flex-1 max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
-          <div class="flex flex-wrap">
-            <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
-              <img
-                  src="../assets/images/fourth.png"
-                  alt="img"
-                  class="relative z-40 object-cover w-full h-96 rounded-3xl"
-              />
-            </div>
-            <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
-              <h2 class="mb-4 text-4xl font-semibold text-blue-500 dark:text-gray-300">Паралетси</h2>
-              <p class="mb-10 text-base leading-7 text-gray-500 dark:text-gray-400 text-left">
-                {description}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="sticky top-0 h-screen flex flex-col items-center justify-center bg-gray-300">
-      <div class="container my-24 mx-auto md:px-6">
-        <div class="justify-center flex-1 max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
-          <div class="flex flex-wrap">
-            <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
-              <img
-                  src="../assets/images/first.jpg"
-                  alt="img"
-                  class="relative z-40 object-cover w-full h-96 rounded-3xl"
-              />
-            </div>
-            <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
-              <h2 class="mb-4 text-4xl font-semibold text-blue-500 dark:text-gray-300">Гумові і латексні петлі</h2>
-              <p class="mb-10 text-base leading-7 text-gray-500 dark:text-gray-400 text-left">
-                {description}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="sticky top-0 h-screen flex flex-col items-center justify-center bg-gray-300 text-white">
-      <div class="container my-24 mx-auto md:px-6">
-        <div class="justify-center flex-1 max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
-          <div class="flex flex-wrap">
-            <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
-              <img
-                  src="../assets/images/fourth.png"
-                  alt="img"
-                  class="relative z-40 object-cover w-full h-96 rounded-3xl"
-              />
-            </div>
-            <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
-              <h2 class="mb-4 text-4xl font-semibold text-blue-500 dark:text-gray-300">Обважнювачі</h2>
-              <p class="mb-10 text-base leading-7 text-gray-500 dark:text-gray-400 text-left">
-                {description}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="sticky top-0 h-screen flex flex-col items-center justify-center bg-gray-300">
-      <div class="container my-24 mx-auto md:px-6">
-        <div class="justify-center flex-1 max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
-          <div class="flex flex-wrap">
-            <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
-              <img
-                  src="../assets/images/first.jpg"
-                  alt="img"
-                  class="relative z-40 object-cover w-full h-96 rounded-3xl"
-              />
-            </div>
-            <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
-              <h2 class="mb-4 text-4xl font-semibold text-blue-500 dark:text-gray-300">Шкіряні накладки</h2>
-              <p class="mb-10 text-base leading-7 text-gray-500 dark:text-gray-400 text-left">
-                {description}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="sticky top-0 h-screen flex flex-col items-center justify-center bg-gray-300 text-white">
-      <div class="container my-24 mx-auto md:px-6">
-        <div class="justify-center flex-1 max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
-          <div class="flex flex-wrap">
-            <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
-              <img
-                  src="../assets/images/fourth.png"
-                  alt="img"
-                  class="relative z-40 object-cover w-full h-96 rounded-3xl"
-              />
-            </div>
-            <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
-              <h2 class="mb-4 text-4xl font-semibold text-blue-500 dark:text-gray-300">Кистьові бинти</h2>
-              <p class="mb-10 text-base leading-7 text-gray-500 dark:text-gray-400 text-left">
-                {description}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="sticky top-0 h-screen flex flex-col items-center justify-center bg-gray-300">
-      <div class="container my-24 mx-auto md:px-6">
-        <div class="justify-center flex-1 max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
-          <div class="flex flex-wrap">
-            <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
-              <img
-                  src="../assets/images/first.jpg"
-                  alt="img"
-                  class="relative z-40 object-cover w-full h-96 rounded-3xl"
-              />
-            </div>
-            <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
-              <h2 class="mb-4 text-4xl font-semibold text-blue-500 dark:text-gray-300">Магнезія</h2>
+              <h2 class="mb-4 text-3xl xl:text-5xl lg:text-4xl md:text-5xl sm:text-5xl font-semibold text-black">{{product.name}}</h2>
               <p class="mb-10 text-base leading-7 text-gray-500 dark:text-gray-400 text-left">
                 {description}
               </p>
