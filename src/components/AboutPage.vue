@@ -90,6 +90,7 @@ const products = [
     </div>
     <div class="sticky top-0 h-screen flex flex-col items-center justify-center bg-neutral-800 text-white">
       <h2 class="text-4xl">The Fourth Title</h2>
+      <img src="" alt="">
     </div>
   </div>
 
