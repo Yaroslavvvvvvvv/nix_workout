@@ -1,11 +1,10 @@
 <script setup>
 import MyHeader from "./components/MyHeader.vue";
-import AboutPage from "./components/AboutPage.vue";
 </script>
 
 <template>
   <MyHeader/>
-  <AboutPage/>
+  <router-view/>
 </template>
 
 <style scoped>

@@ -68,7 +68,7 @@ const products = [
     </div>
     <div
         v-for="product in products" :key="product.id"
-        class="sticky top-0 h-screen flex flex-col items-center justify-center bg-gray-300">
+        class="sticky top-0 h-screen flex flex-col items-center justify-center bg-stone-100">
       <div class="container my-24 mx-auto md:px-6">
         <div class="justify-center flex-1 max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
           <div class="flex flex-wrap">
@@ -87,9 +87,6 @@ const products = [
           </div>
         </div>
       </div>
-    </div>
-    <div class="sticky top-0 h-screen flex flex-col items-center justify-center bg-neutral-800 text-white">
-      <h2 class="text-4xl">The Fourth Title</h2>
     </div>
   </div>
 
