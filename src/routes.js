@@ -12,8 +12,8 @@ const routes = [
         component: () => import('./views/MyCatalog.vue')
     },
     {
-        path: '/delivery',
-        name: 'delivery',
+        path: '/render',
+        name: 'render',
         component: () => import('./views/MyDelivery.vue')
     },
 
