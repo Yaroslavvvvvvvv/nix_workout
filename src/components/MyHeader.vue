@@ -35,7 +35,7 @@ const mobileMenuOpen = ref(false)
       <PopoverGroup class="hidden lg:flex lg:gap-x-12">
         <a href="#" class="text-lg font-bold leading-6 text-gray-300 hover:text-white">Про нас</a>
         <router-link to="/catalog" class="text-lg font-bold leading-6 text-gray-300 hover:text-white">Каталог</router-link>
-        <router-link to="/render" class="text-lg font-bold leading-6 text-gray-300 hover:text-white">Доставка і оплата</router-link>
+        <router-link to="/delivery" class="text-lg font-bold leading-6 text-gray-300 hover:text-white">Доставка і оплата</router-link>
         <a href="#" class="text-lg font-bold leading-6 text-gray-300 hover:text-white">Зв'язок з нами</a>
       </PopoverGroup>
     </nav>
@@ -59,7 +59,7 @@ const mobileMenuOpen = ref(false)
             <div class="space-y-2 py-6">
               <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-100/50">Про нас</a>
               <router-link to="/catalog" class="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-100/50">Каталог</router-link>
-              <router-link to="/render" class="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-100/50">Доставка і оплата</router-link>
+              <router-link to="/delivery" class="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-100/50">Доставка і оплата</router-link>
               <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-100/50">Зв'язок з нами</a>
             </div>
           </div>
