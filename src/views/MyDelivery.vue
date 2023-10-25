@@ -9,7 +9,7 @@
         <div class="flex flex-wrap">
           <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
             <img
-                src="../../public/images/delivery.jpg"
+                src="/images/delivery.jpg"
                 alt="img"
                 class="relative z-40 object-cover w-full h-96 rounded-3xl"/>
           </div>
