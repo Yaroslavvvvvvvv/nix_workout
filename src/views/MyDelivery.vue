@@ -3,9 +3,9 @@
 </script>
 
 <template>
-  <div class="bg-stone-100 h-screen flex flex-col items-center justify-center  animate-fade-down animate-duration-1000">
-    <div class="container my-24  mx-auto md:px-6 bg-stone-100">
-      <div class="justify-center mt-96 flex-1 lg:mt-0 md:mt-96 sm:mt-96 max-w-6xl py-4 mx-auto lg:py-6 md:px-6 bg-stone-100">
+  <div class="bg-white h-screen flex flex-col items-center justify-center  animate-fade-down animate-duration-1000">
+    <div class="container my-24  mx-auto md:px-6">
+      <div class="justify-center mt-96 flex-1 lg:mt-0 md:mt-96 sm:mt-96 max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
         <div class="flex flex-wrap">
           <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
             <img
@@ -13,7 +13,7 @@
                 alt="img"
                 class="relative z-40 object-cover w-full h-96 rounded-3xl"/>
           </div>
-          <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0 bg-stone-100">
+          <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
             <h2 class="mb-2 text-3xl xl:text-5xl lg:text-4xl md:text-5xl sm:text-5xl font-semibold text-black">
               ДОСТАВКА І ОПЛАТА
             </h2>
