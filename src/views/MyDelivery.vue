@@ -45,11 +45,9 @@
                 - Повна передоплата</li>
             </ul>
             <div class="text-center mt-4">
-            <router-link to="/catalog">
               <button class=" h-12 px-6 m-2 text-lg text-indigo-100 transition-colors duration-150 bg-gray-800 rounded-lg
                   focus:shadow-outline hover:bg-gray-950">Перейти в каталог
               </button>
-            </router-link>
             </div>
           </div>
         </div>
