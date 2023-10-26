@@ -41,10 +41,10 @@
             Наше обладнання визнане топ атлетами всієї України. Більше 1000 спортсменів вже тренуються з нами. Стань одним із них!
           </p>
           <div class="text-center">
-            <a href="#"
+            <router-link to="/catalog"
                class="px-4 py-3 text-gray-950 transition-all transform border border-gray-950 rounded-3xl
              hover:bg-gray-950 dark:border-blue-400 dark:hover:bg-blue-500 dark:hover:text-gray-100
-             dark:hover:border-blue-500 dark:text-blue-400 hover:text-gray-100">Перейти в каталог</a>
+             dark:hover:border-blue-500 dark:text-blue-400 hover:text-gray-100">Перейти в каталог</router-link>
           </div>
         </div>
       </div>
