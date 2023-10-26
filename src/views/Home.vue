@@ -1,60 +1,17 @@
 <script setup>
-const products = [
-  {
-    id: 1,
-    name: 'Турніки Настінні',
-    about: '',
-    imageSrc: '/images/products/bars_img.jpg',
-  },
-  {
-    id: 2,
-    name: 'Переносні Бруси',
-    about: '',
-    imageSrc: '/images/products/low_bars_img.jpg',
-  },
-  {
-    id: 3,
-    name: 'Стійка для елементів',
-    about: '',
-    imageSrc: '/images/products/stand_img.jpg',
-  },
-  {
-    id: 4,
-    name: 'Паралетси',
-    about: '',
-    imageSrc: '/images/products/paralets_img.jpg',
-  },
-  {
-    id: 5,
-    name: 'Гумові і латексні петлі',
-    about: '',
-    imageSrc: '/images/products/rubber_img.jpg',
-  },
-  {
-    id: 6,
-    name: 'Обважнювачі',
-    about: '',
-    imageSrc: '/images/products/gainers_img.jpg',
-  },
-  {
-    id: 7,
-    name: 'Шкіряні накладки',
-    about: '',
-    imageSrc: '/images/products/linings_img.jpg',
-  },
-  {
-    id: 8,
-    name: 'Кистьові бинти',
-    about: '',
-    imageSrc: '/images/products/bandages_img.jpg',
-  },
-  {
-    id: 9,
-    name: 'Магнезія',
-    about: '',
-    imageSrc: '/images/products/magnesium_img.jpg',
-  },
-]
+import { db } from '../firebaseConfig.js'
+import { getDocs, collection } from 'firebase/firestore'
+import { ref, onMounted } from 'vue';
+const productsData = ref([]);
+onMounted(async () => {
+
+  try {
+    const querySnapshot = await getDocs(collection(db, 'products'));
+    productsData.value = querySnapshot.docs.map(doc => doc.data());
+  } catch (error) {
+    console.error('Error while retrieving data from Firestore:', error);
+  }
+});
 </script>
 
 <template>
@@ -67,14 +24,14 @@ const products = [
       </span>
     </div>
     <div
-        v-for="product in products" :key="product.id"
+        v-for="product in productsData" :key="product.id"
         class="sticky top-0 h-screen flex flex-col items-center justify-center bg-stone-100">
       <div class="container my-24 mx-auto md:px-6">
         <div class="justify-center flex-1 max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
           <div class="flex flex-wrap">
             <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
               <img
-                  :src="product.imageSrc"
+                  :src="product.image"
                   alt="img"
                   class="relative z-40 object-cover w-full h-96 rounded-3xl"/>
             </div>
