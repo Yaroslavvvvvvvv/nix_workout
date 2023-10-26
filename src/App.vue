@@ -1,7 +1,8 @@
 <script setup>
+
+
+
 import MyHeader from "./components/MyHeader.vue";
-
-
 </script>
 
 <template>
