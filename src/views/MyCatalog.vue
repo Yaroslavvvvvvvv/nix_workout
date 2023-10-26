@@ -172,20 +172,6 @@
 </template>
 
 <script setup>
-import {db} from '../firebaseConfig.js'
-import {getDocs, collection} from 'firebase/firestore'
-import {ref, onMounted} from 'vue';
-
-const categoriesData = ref([]);
-onMounted(async () => {
-
-  try {
-    const querySnapshot = await getDocs(collection(db, 'categories'));
-    categoriesData.value = querySnapshot.docs.map(doc => doc.data());
-  } catch (error) {
-    console.error('Error while retrieving data from Firestore:', error);
-  }
-});
 </script>
 
 <style>

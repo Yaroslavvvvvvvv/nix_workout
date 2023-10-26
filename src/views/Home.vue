@@ -36,10 +36,14 @@ onMounted(async () => {
                   class="relative z-40 object-cover w-full h-96 rounded-3xl"/>
             </div>
             <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0 text-center">
-              <h2 class="mb-4 text-3xl xl:text-5xl lg:text-4xl md:text-5xl sm:text-5xl font-semibold text-black">{{product.name}}</h2>
-              <button
-                  class=" h-12 px-6 m-2 text-lg text-indigo-100 transition-colors duration-150 bg-gray-800 rounded-lg
-                  focus:shadow-outline hover:bg-gray-950">Детальніше</button>
+              <h2 class="mb-4 text-3xl xl:text-5xl lg:text-4xl md:text-5xl sm:text-5xl font-semibold text-black">
+                {{product.name}}</h2>
+              <div class="mt-10">
+                <a href="#"
+                   class="px-4 py-3 text-gray-950 transition-all transform border border-gray-950 rounded-3xl
+             hover:bg-gray-950 dark:border-blue-400 dark:hover:bg-blue-500 dark:hover:text-gray-100
+             dark:hover:border-blue-500 dark:text-blue-400 hover:text-gray-100">Детальніше</a>
+              </div>
             </div>
           </div>
         </div>
