@@ -1,5 +1,5 @@
 <template>
-  <div class="overflow-y-hidden animate-fade-down animate-duration-1000"              >
+  <div class="overflow-y-hidden animate-fade-down animate-duration-1000">
     <div class="flex justify-center items-center">
       <div class="2xl:mx-auto 2xl:container py-6 bg-stone-100 px-4 sm:px-6 xl:px-20 2xl:px-0 w-full">
         <div class="flex flex-col jusitfy-center items-center space-y-10">

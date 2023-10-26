@@ -39,12 +39,14 @@
               - Повна передоплата
             </li>
           </ul>
-          <router-link to="/catalog"
-             class="px-4 py-3 text-gray-950 transition-all transform border border-gray-950 rounded-3xl
+          <div class="text-center">
+            <router-link to="/catalog"
+                         class="px-4 py-3 text-gray-950 transition-all transform border border-gray-950 rounded-3xl
              hover:bg-gray-950 dark:border-blue-400 dark:hover:bg-blue-500 dark:hover:text-gray-100
              dark:hover:border-blue-500 dark:text-blue-400 hover:text-gray-100">
-            Перейти в каталог
-          </router-link>
+              Перейти в каталог
+            </router-link>
+          </div>
         </div>
       </div>
     </div>
