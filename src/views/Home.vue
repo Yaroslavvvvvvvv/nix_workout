@@ -2,12 +2,12 @@
 import { db } from '../firebaseConfig.js'
 import { getDocs, collection } from 'firebase/firestore'
 import { ref, onMounted } from 'vue';
-const productsData = ref([]);
+const categoriesData = ref([]);
 onMounted(async () => {
 
   try {
-    const querySnapshot = await getDocs(collection(db, 'products'));
-    productsData.value = querySnapshot.docs.map(doc => doc.data());
+    const querySnapshot = await getDocs(collection(db, 'categories'));
+    categoriesData.value = querySnapshot.docs.map(doc => doc.data());
   } catch (error) {
     console.error('Error while retrieving data from Firestore:', error);
   }
@@ -24,7 +24,7 @@ onMounted(async () => {
       </span>
     </div>
     <div
-        v-for="product in productsData" :key="product.id"
+        v-for="product in categoriesData" :key="product.id"
         class="sticky top-0 h-screen flex flex-col items-center justify-center bg-stone-100">
       <div class="container my-24 mx-auto md:px-6">
         <div class="justify-center flex-1 max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
@@ -37,8 +37,8 @@ onMounted(async () => {
             </div>
             <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0 text-center">
               <h2 class="mb-4 text-3xl xl:text-5xl lg:text-4xl md:text-5xl sm:text-5xl font-semibold text-black">{{product.name}}</h2>
-                <button
-                    class=" h-12 px-6 m-2 text-lg text-indigo-100 transition-colors duration-150 bg-gray-800 rounded-lg
+              <button
+                  class=" h-12 px-6 m-2 text-lg text-indigo-100 transition-colors duration-150 bg-gray-800 rounded-lg
                   focus:shadow-outline hover:bg-gray-950">Детальніше</button>
             </div>
           </div>
