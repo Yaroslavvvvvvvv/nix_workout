@@ -1,30 +1,17 @@
 <script setup>
-const catalog = [
-  {
-    id: 1,
-    size: '120/80 см',
-    image: '/images/products/mini_bars.jpg',
-    price: '2700 грн'
-  },
-  {
-    id: 2,
-    size: '120/50 см',
-    image: '/images/products/mini_bars.jpg',
-    price: '2250 грн'
-  },
-  {
-    id: 3,
-    size: '100/80 см',
-    image: '/images/products/mini_bars.jpg',
-    price: '2550 грн'
-  },
-  {
-    id: 4,
-    size: '100/50 см',
-    image: '/images/products/mini_bars.jpg',
-    price: '2050 грн'
-  },
-]
+import { db } from '../../firebaseConfig.js'
+import { getDocs, collection } from 'firebase/firestore'
+import { ref, onMounted } from 'vue';
+const barsData = ref([]);
+onMounted(async () => {
+
+  try {
+    const querySnapshot = await getDocs(collection(db, 'bars'));
+    barsData.value = querySnapshot.docs.map(doc => doc.data());
+  } catch (error) {
+    console.error('Error while retrieving data from Firestore:', error);
+  }
+});
 </script>
 
 <template>
@@ -32,7 +19,7 @@ const catalog = [
            class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center
            gap-y-20 gap-x-14 mt-10 mb-5 ">
     <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl animate-fade-down animate-duration-1000"
-         v-for="items in catalog" :key="items.id">
+         v-for="items in barsData" :key="items.id">
       <a href="#">
         <img :src="items.image"
              alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
