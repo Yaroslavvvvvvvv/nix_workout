@@ -21,6 +21,11 @@ const routes = [
         name: 'delivery',
         component: () => import('./views/MyDelivery.vue')
     },
+    {
+        path: '/bars',
+        name: 'bars',
+        component: () => import('./views/products/Bars.vue')
+    },
 ];
 
 const router = createRouter({

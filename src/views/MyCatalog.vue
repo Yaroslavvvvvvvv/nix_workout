@@ -3,6 +3,7 @@
     <div class="flex justify-center items-center">
       <div class="2xl:mx-auto 2xl:container py-6 bg-stone-100 px-4 sm:px-6 xl:px-20 2xl:px-0 w-full">
         <div class="flex flex-col jusitfy-center items-center space-y-10">
+          <router-link to="/bars">
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  md:gap-x-8  w-full">
             <div class="relative group flex justify-center items-center h-full w-full">
               <img class="object-center object-cover h-full w-full"
@@ -67,6 +68,7 @@
                   class="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20 w-36 bg-white bg-opacity-50"></div>
             </div>
           </div>
+          </router-link>
           <div class="relative group hidden md:flex justify-center items-center h-full w-full mt-4 md:mt-8 lg:hidden">
             <img class="object-center object-cover h-full w-full hidden md:block"
                  src="/images/catalog/men_low_bars.jpg" alt="girl-image"/>
