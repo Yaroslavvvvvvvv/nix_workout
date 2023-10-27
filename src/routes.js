@@ -31,6 +31,11 @@ const routes = [
         name: 'low_bars',
         component: () => import('./views/products/LowBars.vue')
     },
+    {
+        path: '/stand',
+        name: 'stand',
+        component: () => import('./views/products/Stand.vue')
+    },
 ];
 
 const router = createRouter({

@@ -22,7 +22,7 @@ onMounted(async () => {
          v-for="items in lowBarsData" :key="items.id">
       <a href="#">
         <img :src="items.image"
-             alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+             alt="Product" class="h-auto w-72 object-cover rounded-t-xl" />
         <div class="px-4 py-3 w-72">
           <span class="text-gray-400 mr-3 uppercase text-xs logo">NIX</span>
           <p class="text-lg font-bold text-black truncate block">{{items.size}}</p>
