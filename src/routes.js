@@ -36,6 +36,11 @@ const routes = [
         name: 'stand',
         component: () => import('./views/products/Stand.vue')
     },
+    {
+        path: '/paralets',
+        name: 'paralets',
+        component: () => import('./views/products/Paralets.vue')
+    },
 ];
 
 const router = createRouter({
