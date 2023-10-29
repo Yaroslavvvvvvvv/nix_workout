@@ -128,11 +128,11 @@
               </router-link>
               <div class="relative group flex justify-center items-center h-full w-full">
                 <img class="object-center object-cover h-full w-full"
-                     src="/images/catalog/men_gainers.jpg" alt="watch-image"/>
+                     src="/images/products/magnesium_img.jpg" alt="image"/>
                 <button
                     class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10
                     absolute text-base font-medium leading-none text-gray-800 py-3 w-36 bg-white">
-                  Обважнювачі
+                  Магнезія
                 </button>
                 <div
                     class="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20
