@@ -112,6 +112,7 @@
               </div>
             </router-link>
             <div class="flex flex-col space-y-4 md:space-y-8 mt-4 md:mt-0">
+              <router-link to="/rubber">
               <div class="relative group flex justify-center items-center h-full w-full">
                 <img class="object-center object-cover h-full w-full"
                      src="/images/catalog/men_rubber.jpg" alt="shoe-image"/>
@@ -124,6 +125,7 @@
                     class="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20
                     w-36 bg-white bg-opacity-50"></div>
               </div>
+              </router-link>
               <div class="relative group flex justify-center items-center h-full w-full">
                 <img class="object-center object-cover h-full w-full"
                      src="/images/catalog/men_gainers.jpg" alt="watch-image"/>

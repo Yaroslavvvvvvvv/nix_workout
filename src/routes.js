@@ -41,6 +41,11 @@ const routes = [
         name: 'paralets',
         component: () => import('./views/products/Paralets.vue')
     },
+    {
+        path: '/rubber',
+        name: 'rubber',
+        component: () => import('./views/products/Rubber.vue')
+    },
 ];
 
 const router = createRouter({
