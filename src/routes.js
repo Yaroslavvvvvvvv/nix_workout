@@ -56,6 +56,11 @@ const routes = [
         name: 'bandages',
         component: () => import('./views/products/Bandages.vue')
     },
+    {
+        path: '/magnesium',
+        name: 'magnesium',
+        component: () => import('./views/products/Magnesium.vue')
+    },
 ];
 
 const router = createRouter({

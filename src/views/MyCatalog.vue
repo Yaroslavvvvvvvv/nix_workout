@@ -130,6 +130,7 @@
                     w-36 bg-white bg-opacity-50"></div>
               </div>
               </router-link>
+              <router-link to="/magnesium">
               <div class="relative group flex justify-center items-center h-full w-full">
                 <img class="object-center object-cover h-full w-full"
                      src="/images/products/magnesium_img.jpg" alt="image"/>
@@ -142,6 +143,7 @@
                     class="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20
                     w-36 bg-white bg-opacity-50"></div>
               </div>
+              </router-link>
             </div>
             <router-link to="/paralets">
             <div class="relative group justify-center items-center h-full w-full hidden lg:flex">
