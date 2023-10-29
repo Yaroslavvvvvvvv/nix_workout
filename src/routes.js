@@ -46,6 +46,16 @@ const routes = [
         name: 'rubber',
         component: () => import('./views/products/Rubber.vue')
     },
+    {
+        path: '/linings',
+        name: 'linings',
+        component: () => import('./views/products/Linings.vue')
+    },
+    {
+        path: '/bandages',
+        name: 'bandages',
+        component: () => import('./views/products/Bandages.vue')
+    },
 ];
 
 const router = createRouter({
