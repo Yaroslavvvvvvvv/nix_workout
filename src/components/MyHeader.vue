@@ -17,7 +17,7 @@ const mobileMenuOpen = ref(false)
 </script>
 
 <template>
-  <header class="sticky top-0 bg-gray-950/95  z-50">
+  <header class="sticky top-0 bg-gray-950/95  z-10">
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 animate-fade-down animate-duration-1000"
          aria-label="Global">
       <div class="flex lg:flex-1">
@@ -44,11 +44,11 @@ const mobileMenuOpen = ref(false)
       <div class="fixed inset-0 z-10" />
       <DialogPanel
           @click="mobileMenuOpen = false"
-          class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-100/90 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-100 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
         <div class="flex items-center justify-between">
           <a class="-m-1.5 p-1.5 flex flex-col items-center">
-            <span class="logo text-3xl font-extrabold text-white">NIX</span>
-            <span class="logo text-2xl font-bold text-white">-workout-</span>
+            <span class="logo text-3xl font-extrabold text-gray-750">NIX</span>
+            <span class="logo text-2xl font-bold text-gray-750">-workout-</span>
           </a>
           <button type="button" class="-m-2.5 rounded-md p-2.5" @click="mobileMenuOpen = false">
             <span class="sr-only">Close menu</span>
