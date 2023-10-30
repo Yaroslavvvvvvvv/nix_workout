@@ -47,10 +47,10 @@ const mobileMenuOpen = ref(false)
           class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-100 px-6 py-6 sm:max-w-sm sm:ring-1
           sm:ring-gray-900/10 animate-fade-down animate-duration-1000">
         <div class="flex items-center justify-between">
-          <a class="-m-1.5 p-1.5 flex flex-col items-center">
+          <router-link to="/" class="-m-1.5 p-1.5 flex flex-col items-center">
             <span class="logo text-3xl font-extrabold text-gray-750">NIX</span>
             <span class="logo text-2xl font-bold text-gray-750">-workout-</span>
-          </a>
+          </router-link>
           <button type="button" class="-m-2.5 rounded-md p-2.5" @click="mobileMenuOpen = false">
             <span class="sr-only">Close menu</span>
             <XMarkIcon class="h-6 w-6" aria-hidden="true" />
