@@ -44,7 +44,8 @@ const mobileMenuOpen = ref(false)
       <div class="fixed inset-0 z-10" />
       <DialogPanel
           @click="mobileMenuOpen = false"
-          class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-100 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-100 px-6 py-6 sm:max-w-sm sm:ring-1
+          sm:ring-gray-900/10 animate-fade-down animate-duration-1000">
         <div class="flex items-center justify-between">
           <a class="-m-1.5 p-1.5 flex flex-col items-center">
             <span class="logo text-3xl font-extrabold text-gray-750">NIX</span>
