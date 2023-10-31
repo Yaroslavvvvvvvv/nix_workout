@@ -27,6 +27,11 @@ const routes = [
         component: () => import('./views/products/Bars.vue')
     },
     {
+        path: '/bars-details',
+        name: 'bars-details',
+        component: () => import('./views/details/BarsDetails.vue')
+    },
+    {
         path: '/low_bars',
         name: 'low_bars',
         component: () => import('./views/products/LowBars.vue')
