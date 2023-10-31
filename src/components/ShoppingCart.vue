@@ -10,10 +10,10 @@
           <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
             <TransitionChild as="template" enter="transform transition ease-in-out duration-500 sm:duration-700" enter-from="translate-x-full" enter-to="translate-x-0" leave="transform transition ease-in-out duration-500 sm:duration-700" leave-from="translate-x-0" leave-to="translate-x-full">
               <DialogPanel class="pointer-events-auto w-screen max-w-md">
-                <div class="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
+                <div class="flex h-full flex-col overflow-y-scroll bg-stone-100 shadow-xl">
                   <div class="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
                     <div class="flex items-start justify-between">
-                      <DialogTitle class="text-lg font-medium text-gray-900">Shopping cart</DialogTitle>
+                      <DialogTitle class="text-lg font-bold text-gray-900 logo">NIX</DialogTitle>
                       <div class="ml-3 flex h-7 items-center">
                         <button type="button" class="relative -m-2 p-2 text-gray-400 hover:text-gray-500" @click="open = false">
                           <span class="absolute -inset-0.5" />
@@ -37,7 +37,7 @@
                                   <h3>
                                     <a :href="product.href">{{ product.name }}</a>
                                   </h3>
-                                  <p class="ml-4">{{ product.price }}</p>
+                                  <p class="ml-4 font-bold">{{ product.price }}</p>
                                 </div>
                                 <p class="mt-1 text-sm text-gray-500">{{ product.color }}</p>
                               </div>
@@ -45,7 +45,7 @@
                                 <p class="text-gray-500">Qty {{ product.quantity }}</p>
 
                                 <div class="flex">
-                                  <button type="button" class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                  <button type="button" class="font-medium text-gray-950 hover:text-indigo-500">Видалити</button>
                                 </div>
                               </div>
                             </div>
@@ -56,19 +56,19 @@
                   </div>
 
                   <div class="border-t border-gray-200 px-4 py-6 sm:px-6">
-                    <div class="flex justify-between text-base font-medium text-gray-900">
-                      <p>Subtotal</p>
+                    <div class="flex justify-between text-base font-bold text-gray-900">
+                      <p>Загалом</p>
                       <p>$262.00</p>
                     </div>
-                    <p class="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                     <div class="mt-6">
-                      <a href="#" class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Checkout</a>
+                      <a href="#"
+                         class="flex items-center justify-center rounded-md border border-transparent bg-gray-600 px-6
+                         py-3 text-base font-medium text-white shadow-sm hover:bg-gray-700">Оформити</a>
                     </div>
                     <div class="mt-6 flex justify-center text-center text-sm text-gray-500">
                       <p>
-                        or
-                        <button type="button" class="font-medium text-indigo-600 hover:text-indigo-500" @click="open = false">
-                          Continue Shopping
+                        <button type="button" class="font-medium text-gray-950 hover:text-gray-800" @click="open = false">
+                          Продовжити
                           <span aria-hidden="true"> &rarr;</span>
                         </button>
                       </p>
@@ -112,8 +112,46 @@ const products = [
     imageAlt:
         'Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.',
   },
+  {
+    id: 3,
+    name: 'Medium Stuff Satchel',
+    href: '#',
+    color: 'Blue',
+    price: '$32.00',
+    quantity: 1,
+    imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
+    imageAlt:
+        'Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.',
+  },
+  {
+    id: 4,
+    name: 'Medium Stuff Satchel',
+    href: '#',
+    color: 'Blue',
+    price: '$32.00',
+    quantity: 1,
+    imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
+    imageAlt:
+        'Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.',
+  },
+  {
+    id: 5,
+    name: 'Medium Stuff Satchel',
+    href: '#',
+    color: 'Blue',
+    price: '$32.00',
+    quantity: 1,
+    imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
+    imageAlt:
+        'Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.',
+  },
   // More products...
 ]
 
 const open = ref(true)
 </script>
+<style scoped>
+.logo {
+  font-family: 'Libre Baskerville', serif;
+}
+</style>

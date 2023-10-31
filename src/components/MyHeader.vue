@@ -82,7 +82,7 @@ function toggleShoppingCart() {
               <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-100/50">Зв'язок з нами</a>
               <a href="#"
                  @click="toggleShoppingCart"
-                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-100/50">Корзина</a>
+                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-100/50">Кошик</a>
             </div>
           </div>
         </div>
