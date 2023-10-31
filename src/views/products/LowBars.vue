@@ -25,7 +25,7 @@ onMounted(async () => {
              alt="Product" class="h-auto w-72 object-cover rounded-t-xl" />
         <div class="px-4 py-3 w-72">
           <span class="text-gray-400 mr-3 uppercase text-xs logo">NIX</span>
-          <p class="text-lg font-bold text-black truncate block">{{items.size}}</p>
+          <p class="text-lg font-bold text-black truncate block">{{items.name}}</p>
           <div class="flex items-center">
             <p class="text-lg font-semibold text-black cursor-auto my-3">{{items.price}}</p>
             <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
