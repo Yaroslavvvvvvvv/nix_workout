@@ -9,14 +9,18 @@ import {
   Bars3Icon,
   XMarkIcon,
 } from '@heroicons/vue/24/outline'
-import ShoppingCart from "../views/ShoppingCart.vue";
+import ShoppingCart from "./ShoppingCart.vue";
 
 const mobileMenuOpen = ref(false)
+const showShoppingCart = ref(false)
+function toggleShoppingCart() {
+  showShoppingCart.value = !showShoppingCart.value;
+}
 </script>
 
 <template>
-  <header class="sticky top-0 bg-gray-500/90 z-10">
-    <ShoppingCart/>
+  <header class="sticky top-0 bg-gray-700/90 z-10">
+    <ShoppingCart v-if="showShoppingCart"/>
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 animate-fade-down animate-duration-1000"
          aria-label="Global">
       <div class="flex lg:flex-1">
@@ -39,7 +43,7 @@ const mobileMenuOpen = ref(false)
         <a href="#" class="text-lg font-bold leading-6 text-gray-300 hover:text-white">Зв'язок з нами</a>
       </PopoverGroup>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end justify-center items-center">
-        <a href="#">
+        <a href="#" @click="toggleShoppingCart">
         <div class="relative py-2">
           <div class="t-0 absolute left-3">
             <p class="flex h-2 w-2 items-center justify-center rounded-full bg-gray-100 p-3 text-xs font-bold text-gray-950">3</p>

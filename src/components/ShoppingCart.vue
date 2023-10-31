@@ -115,5 +115,5 @@ const products = [
   // More products...
 ]
 
-const open = ref(false)
+const open = ref(true)
 </script>
