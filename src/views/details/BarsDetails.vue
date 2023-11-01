@@ -16,13 +16,13 @@
         Con un'ammortizzazione incredibile per sostenerti in tutti i tuoi chilometri, Invincible 3 offre un livello di comfort elevatissimo sotto il piede per aiutarti a dare il massimo oggi, domani e oltre. Questo modello incredibilmente elastico e sostenitivo, è pensato per dare il massimo lungo il tuo percorso preferito e fare ritorno a casa carico di energia, in attesa della prossima corsa.
       </p>
       <h6 class="text-2xl font-semibold">2700 грн</h6>
-      <div class="flex flex-row items-center gap-12">
+      <div class="flex flex-row items-center gap-12 flex-wrap">
         <div class="flex flex-row items-center">
           <button class="bg-gray-200 py-2 px-5 rounded-lg text-violet-800 text-3xl" @click="decrementAmount">-</button>
           <span class="py-4 px-6 rounded-lg">{{ amount }}</span>
           <button class="bg-gray-200 py-2 px-4 rounded-lg text-violet-800 text-3xl" @click="incrementAmount">+</button>
         </div>
-        <button class="bg-violet-800 text-white font-semibold py-3 px-16 rounded-xl h-full">Додати в кошик</button>
+          <button class="bg-violet-800 text-white font-semibold py-3 px-16 rounded-xl h-full">Додати в кошик</button>
       </div>
     </div>
   </div>
