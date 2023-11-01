@@ -34,10 +34,10 @@ export default {
   data() {
     return {
       images: {
-        img1: "/public/images/bars_details/first_bars.jpg",
-        img2: "/public/images/bars_details/second_bars.jpg",
-        img3: "/public/images/bars_details/third_bars.jpg",
-        img4: "/public/images/bars_details/fourth_bars.jpg",
+        img1: "/images/bars_details/first_bars.jpg",
+        img2: "/images/bars_details/second_bars.jpg",
+        img3: "/images/bars_details/third_bars.jpg",
+        img4: "/images/bars_details/fourth_bars.jpg",
       },
       activeImg: "/public/images/bars_details/first_bars.jpg",
       amount: 1,
