@@ -27,7 +27,7 @@ onMounted(async () => {
           <span class="text-gray-400 mr-3 uppercase text-xs logo">NIX</span>
           <p class="text-lg font-bold text-black truncate block">{{items.name}}</p>
           <div class="flex items-center">
-            <p class="text-lg font-semibold text-black cursor-auto my-3">{{items.price}}</p>
+            <p class="text-lg font-semibold text-black cursor-auto my-3">{{items.price}} грн</p>
             <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                       fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
               <path fill-rule="evenodd"

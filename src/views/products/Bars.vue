@@ -2,6 +2,7 @@
 import { db } from '../../firebaseConfig.js'
 import { getDocs, collection } from 'firebase/firestore'
 import { ref, onMounted } from 'vue';
+
 const barsData = ref([]);
 onMounted(async () => {
 
@@ -19,15 +20,15 @@ onMounted(async () => {
            class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center
            gap-y-20 gap-x-14 mt-10 mb-5 ">
     <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl animate-fade-down animate-duration-1000"
-         v-for="items in barsData" :key="items.id">
+         v-for="product in barsData" :key="product.id">
       <router-link to="/bars-details">
-        <img :src="items.image"
+        <img :src="product.image"
              alt="Product" class="h-auto w-72 object-cover rounded-t-xl" />
         <div class="px-4 py-3 w-72">
           <span class="text-gray-400 mr-3 uppercase text-xs logo">NIX</span>
-          <p class="text-lg font-bold text-black truncate block">{{items.name}}</p>
+          <p class="text-lg font-bold text-black truncate block">{{product.name}}</p>
           <div class="flex items-center">
-            <p class="text-lg font-semibold text-black cursor-auto my-3">{{items.price}}</p>
+            <p class="text-lg font-semibold text-black cursor-auto my-3">{{product.price}} грн</p>
             <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                       fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
               <path fill-rule="evenodd"

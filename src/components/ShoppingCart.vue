@@ -26,7 +26,7 @@
                     <div class="mt-8">
                       <div class="flow-root">
                         <ul role="list" class="-my-6 divide-y divide-gray-200">
-                          <li v-for="product in products" :key="product.id" class="flex py-6">
+                          <li v-for="product in cart" :key="product.id" class="flex py-6">
                             <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                               <img :src="product.image" alt="product" class="h-full w-full object-cover object-center" />
                             </div>
@@ -43,7 +43,9 @@
                               <div class="flex flex-1 items-end justify-between text-sm">
 
                                 <div class="flex">
-                                  <button type="button" class="font-medium text-gray-950 hover:text-indigo-500">Видалити</button>
+                                  <button type="button"
+                                          @click="removeFromCart(product.id)"
+                                          class="font-medium text-gray-950 hover:text-indigo-500">Видалити</button>
                                 </div>
                               </div>
                             </div>
@@ -56,7 +58,7 @@
                   <div class="border-t border-gray-200 px-4 py-6 sm:px-6">
                     <div class="flex justify-between text-base font-bold text-gray-900">
                       <p>Загалом</p>
-                      <p>$262.00</p>
+                      <p>{{ cartTotal }}</p>
                     </div>
                     <div class="mt-6">
                       <a href="#"
@@ -84,19 +86,20 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useStore } from 'vuex';
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import { XMarkIcon } from '@heroicons/vue/24/outline'
 
 
-const products = [
-  {
-    id: 1,
-    name: 'Throwback Hip Bag',
-    href: '#',
-    price: '$90.00',
-    image: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
-  },
-]
+const store = useStore(); // Получите доступ к хранилищу Vuex
+
+const cart = store.state.cart; // Получите данные о корзине из состояния
+
+const removeFromCart = (productId) => {
+  store.dispatch('removeFromCart', productId); // Вызовите действие для удаления товара из корзины
+};
+
+const cartTotal = store.getters.cartTotal;
 
 const open = ref(true)
 </script>

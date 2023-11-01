@@ -1,7 +1,20 @@
-import { reactive } from 'vue';
+// store.js
 
-const store = reactive({
-    cartItems: [], // Сюда будут добавляться товары из каталога
+import { createStore } from 'vuex';
+
+export default createStore({
+    state: {
+        cart: [], // начальный пустой массив для корзины
+    },
+    mutations: {
+        addToCart(state, product) {
+            state.cart.push(product);
+        },
+
+    },
+    actions: {
+        addToCart({ commit }, product) {
+            commit('addToCart', product);
+        },
+    },
 });
-
-export default store;
