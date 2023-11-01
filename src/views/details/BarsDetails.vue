@@ -2,20 +2,20 @@
   <div class="max-w-7xl mx-auto p-8 animate-fade-down animate-duration-1000">
     <div class="flex flex-col justify-between lg:flex-row gap-16 lg:items-center">
       <div class="flex flex-col gap-6 lg:w-2/4">
-        <img :src="activeImg" alt="image" class="w-full h-full aspect-square object-cover rounded-xl"/>
+        <img :src="firstFirebaseImage" alt="image" class="w-full h-full aspect-square object-cover rounded-xl"/>
         <div class="flex flex-row justify-between h-24">
-          <img v-for="(image, index) in Object.values(images)" :key="index" :src="image" alt="image"
+          <img v-for="(image, index) in Object.values(imagesMini)" :key="index" :src="image" alt="image"
                class="w-24 h-24 rounded-md cursor-pointer" @click="setActiveImage(image)" />
         </div>
       </div>
       <div class="flex flex-col gap-4 lg:w-2/4">
         <div>
-          <h1 class="text-3xl font-bold">Настінний Турнік 120/80 см</h1>
+          <h1 class="text-3xl font-bold">{{ productData.name }}</h1>
         </div>
         <p class="text-gray-700">
           Con un'ammortizzazione incredibile per sostenerti in tutti i tuoi chilometri, Invincible 3 offre un livello di comfort elevatissimo sotto il piede per aiutarti a dare il massimo oggi, domani e oltre. Questo modello incredibilmente elastico e sostenitivo, è pensato per dare il massimo lungo il tuo percorso preferito e fare ritorno a casa carico di energia, in attesa della prossima corsa.
         </p>
-        <h6 class="text-2xl font-semibold">2700 грн</h6>
+        <h6 class="text-2xl font-semibold">{{productData.price}} грн</h6>
         <div class="flex flex-row items-center gap-12 flex-wrap">
           <div class="flex flex-row items-center">
             <button class="bg-gray-200 py-2 px-5 rounded-lg text-violet-800 text-3xl" @click="decrementAmount">-</button>
@@ -30,21 +30,38 @@
 </template>
 
 <script>
+import { db } from '../../firebaseConfig.js'
+import { getDoc, doc } from 'firebase/firestore'
+
 export default {
   data() {
     return {
-      images: {
-        img1: "/images/bars_details/third_bars.jpg",
+      imagesMini: {
+        img1: "/images/products/mini_bars.jpg",
         img2: "/images/bars_details/second_bars.jpg",
-        img3: "/images/bars_details/fourth_bars.jpg",
-      },
-      activeImg: "/images/bars_details/third_bars.jpg",
+        img3: "/images/bars_details/third_bars.jpg",},
+      productData: {},
+      firstFirebaseImage: "",
       amount: 1,
     };
   },
+  async created() {
+    try {
+      const productDoc = doc(db, 'bars', '2aDrX0txHPUufhEGxzfk');
+      const productSnapshot = await getDoc(productDoc);
+      if (productSnapshot.exists()) {
+        this.productData = productSnapshot.data();
+        this.firstFirebaseImage = this.productData.image;
+      } else {
+        console.error('Product not found in Firestore');
+      }
+    } catch (error) {
+      console.error('Error getting data from Firestore:', error);
+    }
+  },
   methods: {
     setActiveImage(image) {
-      this.activeImg = image;
+      this.firstFirebaseImage = image;
     },
     decrementAmount() {
       if (this.amount > 1) {
