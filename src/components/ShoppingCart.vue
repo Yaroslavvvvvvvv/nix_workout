@@ -109,7 +109,4 @@ const open = ref(true)
 .logo {
   font-family: 'Libre Baskerville', serif;
 }
-.flex-1 {
-  overflow-y: auto;
-}
 </style>
