@@ -22,7 +22,9 @@
             <span class="py-4 px-6 rounded-lg">{{ amount }}</span>
             <button class="bg-gray-200 py-2 px-4 rounded-lg text-violet-800 text-3xl" @click="incrementAmount">+</button>
           </div>
-          <button class="bg-violet-800 text-white font-semibold py-3 px-16 rounded-xl h-full">Додати в кошик</button>
+          <button
+              @click="addToCart"
+              class="bg-violet-800 text-white font-semibold py-3 px-16 rounded-xl h-full">Додати в кошик</button>
         </div>
       </div>
     </div>
@@ -43,6 +45,7 @@ export default {
       productData: {},
       firstFirebaseImage: "",
       amount: 1,
+      cart: [],
     };
   },
   async created() {
@@ -70,6 +73,17 @@ export default {
     },
     incrementAmount() {
       this.amount++;
+    },
+    addToCart() {
+      const productToAdd = {
+        image: this.productData.image,
+        name: this.productData.name,
+        price: this.productData.price,
+        amount: this.amount,
+      };
+
+      this.$store.dispatch('addToCart', productToAdd);
+      console.log('Product added to cart:', productToAdd);
     },
   },
 };

@@ -37,15 +37,13 @@
                                   <h3>
                                     <a :href="product.href">{{ product.name }}</a>
                                   </h3>
-                                  <p class="ml-4 font-bold">{{ product.price }}</p>
+                                  <p class="ml-4 font-bold">{{ product.price }} грн</p>
                                 </div>
                               </div>
                               <div class="flex flex-1 items-end justify-between text-sm">
 
                                 <div class="flex">
-                                  <button type="button"
-                                          @click="removeFromCart(product.id)"
-                                          class="font-medium text-gray-950 hover:text-indigo-500">Видалити</button>
+                                  <button type="button" class="font-medium text-gray-950 hover:text-indigo-500">Видалити</button>
                                 </div>
                               </div>
                             </div>
@@ -58,7 +56,7 @@
                   <div class="border-t border-gray-200 px-4 py-6 sm:px-6">
                     <div class="flex justify-between text-base font-bold text-gray-900">
                       <p>Загалом</p>
-                      <p>{{ cartTotal }}</p>
+                      <p>$262.00</p>
                     </div>
                     <div class="mt-6">
                       <a href="#"
@@ -86,20 +84,13 @@
 
 <script setup>
 import { ref } from 'vue'
-import { useStore } from 'vuex';
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import { XMarkIcon } from '@heroicons/vue/24/outline'
+import { useStore } from 'vuex';
+const store = useStore();
 
+const cart = store.state.cart;
 
-const store = useStore(); // Получите доступ к хранилищу Vuex
-
-const cart = store.state.cart; // Получите данные о корзине из состояния
-
-const removeFromCart = (productId) => {
-  store.dispatch('removeFromCart', productId); // Вызовите действие для удаления товара из корзины
-};
-
-const cartTotal = store.getters.cartTotal;
 
 const open = ref(true)
 </script>
