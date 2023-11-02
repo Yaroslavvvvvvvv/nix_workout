@@ -17,11 +17,6 @@
         </p>
         <h6 class="text-2xl font-semibold">{{productData.price}} грн</h6>
         <div class="flex flex-row items-center gap-12 flex-wrap">
-          <div class="flex flex-row items-center">
-            <button class="bg-gray-200 py-2 px-5 rounded-lg text-violet-800 text-3xl" @click="decrementAmount">-</button>
-            <span class="py-4 px-6 rounded-lg">{{ amount }}</span>
-            <button class="bg-gray-200 py-2 px-4 rounded-lg text-violet-800 text-3xl" @click="incrementAmount">+</button>
-          </div>
           <button
               @click="addToCart"
               class="bg-violet-800 text-white font-semibold py-3 px-16 rounded-xl h-full">Додати в кошик</button>
@@ -44,7 +39,6 @@ export default {
         img3: "/images/bars_details/third_bars.jpg",},
       productData: {},
       firstFirebaseImage: "",
-      amount: 1,
       cart: [],
     };
   },
@@ -66,20 +60,11 @@ export default {
     setActiveImage(image) {
       this.firstFirebaseImage = image;
     },
-    decrementAmount() {
-      if (this.amount > 1) {
-        this.amount--;
-      }
-    },
-    incrementAmount() {
-      this.amount++;
-    },
     addToCart() {
       const productToAdd = {
         image: this.productData.image,
         name: this.productData.name,
         price: this.productData.price,
-        amount: this.amount,
       };
 
       this.$store.dispatch('addToCart', productToAdd);

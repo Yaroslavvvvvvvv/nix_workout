@@ -33,17 +33,19 @@
 
                             <div class="ml-4 flex flex-1 flex-col">
                               <div>
-                                <div class="flex justify-between text-base font-medium text-gray-900">
-                                  <h3>
+                                <div class=" text-sm font-medium text-gray-900">
+                                  <h6>
                                     <a :href="product.href">{{ product.name }}</a>
-                                  </h3>
-                                  <p class="ml-4 font-bold">{{ product.price }} грн</p>
+                                  </h6>
+                                  <p class="font-bold">{{ product.price }} грн</p>
                                 </div>
                               </div>
                               <div class="flex flex-1 items-end justify-between text-sm">
 
                                 <div class="flex">
-                                  <button type="button" class="font-medium text-gray-950 hover:text-indigo-500">Видалити</button>
+                                  <button type="button"
+                                          @click="removeItem(product)"
+                                          class="font-medium text-gray-950 hover:text-indigo-500">Видалити</button>
                                 </div>
                               </div>
                             </div>
@@ -56,7 +58,7 @@
                   <div class="border-t border-gray-200 px-4 py-6 sm:px-6">
                     <div class="flex justify-between text-base font-bold text-gray-900">
                       <p>Загалом</p>
-                      <p>$262.00</p>
+                      <p>{{totalPrice}} грн</p>
                     </div>
                     <div class="mt-6">
                       <a href="#"
@@ -84,13 +86,22 @@
 
 <script setup>
 import { ref } from 'vue'
+import { computed } from 'vue';
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import { XMarkIcon } from '@heroicons/vue/24/outline'
 import { useStore } from 'vuex';
 const store = useStore();
 
 const cart = store.state.cart;
-
+const removeItem = (product) => {
+  const index = cart.indexOf(product);
+  if (index !== -1) {
+    cart.splice(index, 1);
+  }
+}
+const totalPrice = computed(() => {
+  return cart.reduce((total, product) => total + product.price, 0);
+});
 
 const open = ref(true)
 </script>
