@@ -11,7 +11,7 @@
             <TransitionChild as="template" enter="transform transition ease-in-out duration-500 sm:duration-700" enter-from="translate-x-full" enter-to="translate-x-0" leave="transform transition ease-in-out duration-500 sm:duration-700" leave-from="translate-x-0" leave-to="translate-x-full">
               <DialogPanel class="pointer-events-auto w-screen max-w-md">
                 <div class="flex h-full flex-col overflow-y-scroll bg-stone-100 shadow-xl">
-                  <div class="flex-1 overflow-y-auto px-4 py-6 sm:px-6 w-full h-48 product-list">
+                  <div class="flex-1 overflow-y-auto px-4 py-6 sm:px-6 w-full h-48">
                     <div class="flex items-start justify-between">
                       <DialogTitle class="text-lg font-bold text-gray-900 logo">NIX</DialogTitle>
                       <div class="ml-3 flex h-7 items-center">
@@ -109,8 +109,7 @@ const open = ref(true)
 .logo {
   font-family: 'Libre Baskerville', serif;
 }
-.product-list {
-  max-height: 100vh; /* Установите максимальную высоту для контейнера, чтобы он помещался в видимой области */
-  overflow-y: auto; /* Включите вертикальную прокрутку, когда содержимое превышает высоту контейнера */
+.flex-1 {
+  overflow-y: auto;
 }
 </style>
