@@ -1,94 +1,49 @@
 <template>
-  <TransitionRoot as="template" :show="open">
-    <Dialog as="div" class="relative z-10" @close="open = false">
-      <TransitionChild as="template" enter="ease-in-out duration-500" enter-from="opacity-0" enter-to="opacity-100" leave="ease-in-out duration-500" leave-from="opacity-100" leave-to="opacity-0">
-        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
-      </TransitionChild>
-
-      <div class="fixed inset-0 overflow-hidden">
-        <div class="absolute inset-0 overflow-hidden">
-          <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
-            <TransitionChild as="template" enter="transform transition ease-in-out duration-500 sm:duration-700" enter-from="translate-x-full" enter-to="translate-x-0" leave="transform transition ease-in-out duration-500 sm:duration-700" leave-from="translate-x-0" leave-to="translate-x-full">
-              <DialogPanel class="pointer-events-auto w-screen max-w-md">
-                <div class="flex h-full flex-col overflow-y-scroll bg-stone-100 shadow-xl">
-                  <div class="flex-1 overflow-y-auto px-4 py-6 sm:px-6 w-full h-48 test">
-                    <div class="flex items-start justify-between">
-                      <DialogTitle class="text-lg font-bold text-gray-900 logo">NIX</DialogTitle>
-                      <div class="ml-3 flex h-7 items-center">
-                        <button type="button" class="relative -m-2 p-2 text-gray-400 hover:text-gray-500" @click="open = false">
-                          <span class="absolute -inset-0.5" />
-                          <span class="sr-only">Close panel</span>
-                          <XMarkIcon class="h-6 w-6" aria-hidden="true" />
-                        </button>
-                      </div>
-                    </div>
-
-                    <div class="mt-8">
-                      <div class="flow-root">
-                        <ul role="list" class="-my-6 divide-y divide-gray-200">
-                          <li v-for="product in cart" :key="product.id" class="flex py-6">
-                            <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                              <img :src="product.image" alt="product" class="h-full w-full object-cover object-center" />
-                            </div>
-
-                            <div class="ml-4 flex flex-1 flex-col">
-                              <div>
-                                <div class=" text-sm font-medium text-gray-900">
-                                  <h6>
-                                    <a :href="product.href">{{ product.name }}</a>
-                                  </h6>
-                                  <p class="font-bold">{{ product.price }} грн</p>
-                                </div>
-                              </div>
-                              <div class="flex flex-1 items-end justify-between text-sm">
-
-                                <div class="flex">
-                                  <button type="button"
-                                          @click="removeItem(product)"
-                                          class="font-medium text-gray-950 hover:text-indigo-500">Видалити</button>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="border-t border-gray-200 px-4 py-6 sm:px-6">
-                    <div class="flex justify-between text-base font-bold text-gray-900">
-                      <p>Загалом</p>
-                      <p>{{totalPrice}} грн</p>
-                    </div>
-                    <div class="mt-6">
-                      <a href="#"
-                         class="flex items-center justify-center rounded-md border border-transparent bg-gray-600 px-6
-                         py-3 text-base font-medium text-white shadow-sm hover:bg-gray-700">Оформити</a>
-                    </div>
-                    <div class="mt-6 flex justify-center text-center text-sm text-gray-500">
-                      <p>
-                        <button type="button" class="font-medium text-gray-950 hover:text-gray-800" @click="open = false">
-                          Продовжити
-                          <span aria-hidden="true"> &rarr;</span>
-                        </button>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </DialogPanel>
-            </TransitionChild>
+  <div class="bg-gray-100 pt-20">
+    <h1 class="mb-10 text-center text-2xl font-bold logo">NIX</h1>
+    <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
+      <div class="rounded-lg md:w-2/3">
+        <div class="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start" v-for="product in cart" :key="product.id">
+          <img :src="product.image" alt="product-image" class="w-full rounded-lg sm:w-40" />
+          <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
+            <div class="mt-5 sm:mt-0">
+              <h2 class="text-lg font-bold text-gray-900">{{product.name}}</h2>
+            </div>
+            <div class="mt-4 flex justify-between im sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
+              <div class="flex items-center border-gray-100">
+                <span class="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50"> - </span>
+                <input class="h-8 w-8 border bg-white text-center text-xs outline-none" type="number" value="2" min="1" />
+                <span class="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"> + </span>
+              </div>
+              <div class="flex items-center space-x-4">
+                <p class="text-sm">{{product.price}} грн</p>
+                <svg @click="removeItem(product)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5 cursor-pointer duration-150 hover:text-red-500">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </Dialog>
-  </TransitionRoot>
+      <!-- Sub total -->
+      <div class="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
+
+        <hr class="my-4" />
+        <div class="flex justify-between">
+          <p class="text-lg font-bold">Total</p>
+          <div class="">
+            <p class="mb-1 text-lg font-bold">{{totalPrice}} грн</p>
+          </div>
+        </div>
+        <button class="mt-6 w-full rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600">Check out</button>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
 import { computed } from 'vue';
-import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
-import { XMarkIcon } from '@heroicons/vue/24/outline'
+
 import { useStore } from 'vuex';
 const store = useStore();
 
@@ -103,14 +58,9 @@ const totalPrice = computed(() => {
   return cart.reduce((total, product) => total + product.price, 0);
 });
 
-const open = ref(true)
 </script>
 <style scoped>
 .logo {
   font-family: 'Libre Baskerville', serif;
-}
-.test {
-  overflow-y: scroll !important;
-  -webkit-overflow-scrolling: touch;
 }
 </style>

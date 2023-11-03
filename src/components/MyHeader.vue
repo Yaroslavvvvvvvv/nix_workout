@@ -13,9 +13,6 @@ import ShoppingCart from "./ShoppingCart.vue";
 
 const mobileMenuOpen = ref(false)
 const showShoppingCart = ref(false)
-function toggleShoppingCart() {
-  showShoppingCart.value = !showShoppingCart.value;
-}
 </script>
 
 <template>
@@ -43,7 +40,7 @@ function toggleShoppingCart() {
         <a href="#" class="text-lg font-bold leading-6 text-gray-300 hover:text-white">Зв'язок з нами</a>
       </PopoverGroup>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end justify-center items-center">
-        <a href="#" @click="toggleShoppingCart">
+        <router-link to="/shopping">
         <div class="relative py-2">
           <div class="t-0 absolute left-3">
             <p class="flex h-2 w-2 items-center justify-center rounded-full bg-gray-100 p-3 text-xs font-bold text-gray-950">3</p>
@@ -54,7 +51,7 @@ function toggleShoppingCart() {
             14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
           </svg>
         </div>
-        </a>
+        </router-link>
       </div>
     </nav>
     <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -80,9 +77,8 @@ function toggleShoppingCart() {
               <router-link to="/catalog" class="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-100/50">Каталог</router-link>
               <router-link to="/delivery" class="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-100/50">Доставка і оплата</router-link>
               <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-100/50">Зв'язок з нами</a>
-              <a href="#"
-                 @click="toggleShoppingCart"
-                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-100/50">Кошик</a>
+              <router-link to="/shopping"
+                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-100/50">Кошик</router-link>
             </div>
           </div>
         </div>
