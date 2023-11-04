@@ -21,7 +21,7 @@ onMounted(async () => {
            gap-y-20 gap-x-14 mt-10 mb-5 ">
     <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl animate-fade-down animate-duration-1000"
          v-for="product in barsData" :key="product.id">
-      <router-link to="/bars-details">
+      <router-link :to="`/${product.path}`">
         <img :src="product.image"
              alt="Product" class="h-auto w-72 object-cover rounded-t-xl" />
         <div class="px-4 py-3 w-72">

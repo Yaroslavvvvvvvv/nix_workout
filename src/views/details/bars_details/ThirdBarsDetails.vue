@@ -2,7 +2,7 @@
   <div class="max-w-7xl mx-auto p-8 animate-fade-down animate-duration-1000">
     <div class="flex flex-col justify-between lg:flex-row gap-16 lg:items-center">
       <div class="flex flex-col gap-6 lg:w-2/4">
-        <img :src="firstFirebaseImage" alt="image" class="w-full h-full aspect-square object-cover rounded-xl"/>
+        <img :src="firstFirebaseImage" alt="image" class="w-full h-full aspect-square  rounded-xl"/>
         <div class="flex flex-row justify-between h-24">
           <img v-for="(image, index) in Object.values(imagesMini)" :key="index" :src="image" alt="image"
                class="w-24 h-24 rounded-md cursor-pointer" @click="setActiveImage(image)" />
@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import { db } from '../../firebaseConfig.js'
+import { db } from '../../../firebaseConfig.js'
 import { getDoc, doc } from 'firebase/firestore'
 
 export default {
@@ -44,7 +44,7 @@ export default {
   },
   async created() {
     try {
-      const productDoc = doc(db, 'bars', '2aDrX0txHPUufhEGxzfk');
+      const productDoc = doc(db, 'bars', 'UyM243StbmcZ1HFXtE1v');
       const productSnapshot = await getDoc(productDoc);
       if (productSnapshot.exists()) {
         this.productData = productSnapshot.data();

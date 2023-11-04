@@ -34,7 +34,22 @@ const routes = [
     {
         path: '/bars-details',
         name: 'bars-details',
-        component: () => import('./views/details/BarsDetails.vue')
+        component: () => import('./views/details/bars_details/BarsDetails.vue')
+    },
+    {
+        path: '/second-bars-details',
+        name: 'second-bars-details',
+        component: () => import('./views/details/bars_details/SecondBardDetails.vue')
+    },
+    {
+        path: '/third-bars-details',
+        name: 'third-bars-details',
+        component: () => import('./views/details/bars_details/ThirdBarsDetails.vue')
+    },
+    {
+        path: '/fourth-bars-details',
+        name: 'fourth-bars-details',
+        component: () => import('./views/details/bars_details/FourthBarsDetails.vue')
     },
     {
         path: '/low_bars',
