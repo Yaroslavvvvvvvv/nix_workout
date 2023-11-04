@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-100 pt-20 animate-fade-down animate-duration-1000">
+  <div class="bg-gray-100 pt-20 pb-20 animate-fade-down animate-duration-1000">
     <h1 class="mb-10 text-center text-2xl font-bold logo">NIX</h1>
     <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
       <div class="rounded-lg md:w-2/3">
@@ -11,9 +11,7 @@
             </div>
             <div class="mt-4 flex justify-between im sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
               <div class="flex items-center border-gray-100">
-                <span class="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-gray-500 hover:text-blue-50"> - </span>
-                <input class="h-8 w-8 border bg-white text-center text-xs outline-none" type="number" value="2" min="1" />
-                <span class="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-gray-500 hover:text-blue-50"> + </span>
+                <span class="text-base font-bold text-gray-900 logo">NIX</span>
               </div>
               <div class="flex items-center space-x-4">
                 <p class="text-lg font-medium">{{product.price}} грн</p>
