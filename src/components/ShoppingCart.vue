@@ -1,9 +1,10 @@
 <template>
   <div class="bg-gray-100 pt-20 pb-20 animate-fade-down animate-duration-1000">
-    <h1 class="mb-10 text-center text-2xl font-bold logo">NIX</h1>
+
     <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
       <div class="rounded-lg md:w-2/3">
-        <div class="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start" v-for="product in cart" :key="product.id">
+        <div class="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start"
+             v-for="product in cart" :key="product.id">
           <img :src="product.image" alt="product-image" class="w-full rounded-lg sm:w-40" />
           <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
             <div class="mt-5 sm:mt-0">
@@ -23,8 +24,10 @@
             </div>
           </div>
         </div>
+        <div v-if="cart.length === 0">
+          <p class="text-center text-2xl font-bold text-gray-950">Ваш кошик порожній</p>
+        </div>
       </div>
-      <!-- Sub total -->
       <div class="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
 
         <hr class="my-4" />
