@@ -19,7 +19,7 @@
         <div class="flex flex-row items-center gap-12 flex-wrap">
           <button
               @click="addToCart"
-              class="bg-violet-800 text-white font-semibold py-3 px-16 rounded-xl h-full">Додати в кошик</button>
+              class="bg-gray-600 hover:bg-gray-800 text-white font-semibold py-3 px-16 rounded-xl h-full">Додати в кошик</button>
         </div>
       </div>
     </div>
