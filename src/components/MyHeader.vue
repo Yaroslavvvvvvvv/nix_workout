@@ -1,5 +1,6 @@
 <script setup>
-import { ref } from 'vue'
+
+import { ref, computed } from 'vue';
 import {
   Dialog,
   DialogPanel,
@@ -9,15 +10,16 @@ import {
   Bars3Icon,
   XMarkIcon,
 } from '@heroicons/vue/24/outline'
-import ShoppingCart from "./ShoppingCart.vue";
 
 const mobileMenuOpen = ref(false)
-const showShoppingCart = ref(false)
+import { useStore } from 'vuex';
+const store = useStore();
+const cartItemCount = computed(() => store.state.cartItemCount);
+
 </script>
 
 <template>
   <header class="sticky top-0 bg-gray-700/90 z-10">
-    <ShoppingCart v-if="showShoppingCart"/>
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 animate-fade-down animate-duration-1000"
          aria-label="Global">
       <div class="flex lg:flex-1">
@@ -43,7 +45,9 @@ const showShoppingCart = ref(false)
         <router-link to="/shopping">
         <div class="relative py-2">
           <div class="t-0 absolute left-3">
-            <p class="flex h-2 w-2 items-center justify-center rounded-full bg-gray-100 p-3 text-xs font-bold text-gray-950">3</p>
+            <p class="flex h-2 w-2 items-center justify-center rounded-full bg-gray-100 p-3 text-xs font-bold text-gray-950">
+              {{  cartItemCount }}
+            </p>
           </div>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="file: mt-4 h-6 w-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5

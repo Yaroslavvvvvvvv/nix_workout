@@ -2,14 +2,20 @@ import { createStore } from 'vuex';
 
 export default createStore({
     state: {
-        cart: [], // начальный пустой массив для корзины
+        cart: [],
+        cartItemCount: 0,
     },
     mutations: {
         addToCart(state, product) {
             state.cart.push(product);
+            state.cartItemCount = state.cart.length;
         },
         removeFromCart(state, productIndex) {
             state.cart.splice(productIndex, 1);
+            state.cartItemCount = state.cart.length;
+        },
+        updateCartItemCount(state) {
+            state.cartItemCount = state.cart.length;
         },
     },
     actions: {

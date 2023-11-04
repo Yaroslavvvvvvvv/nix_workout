@@ -60,6 +60,7 @@ const totalPrice = computed(() => {
   return cart.reduce((total, product) => total + product.price, 0);
 });
 
+
 </script>
 <style scoped>
 .logo {
