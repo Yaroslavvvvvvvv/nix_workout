@@ -1,22 +1,25 @@
+
+
 <script setup>
 
-import { ref, computed } from 'vue';
-import {
+  import { ref, computed } from 'vue';
+  import {
   Dialog,
   DialogPanel,
   PopoverGroup,
 } from '@headlessui/vue'
-import {
+  import {
   Bars3Icon,
   XMarkIcon,
 } from '@heroicons/vue/24/outline'
 
-const mobileMenuOpen = ref(false)
-import { useStore } from 'vuex';
-const store = useStore();
-const cartItemCount = computed(() => store.state.cartItemCount);
+  const mobileMenuOpen = ref(false)
+  import { useStore } from 'vuex';
+  const store = useStore();
+  const cartItemCount = computed(() => store.getters.cartItemCount);
 
 </script>
+
 
 <template>
   <header class="sticky top-0 bg-gray-700/90 z-10">
