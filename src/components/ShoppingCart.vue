@@ -37,7 +37,7 @@
             <p class="mb-1 text-lg font-bold">{{totalPrice}} грн</p>
           </div>
         </div>
-        <button class="mt-6 w-full rounded-md bg-gray-600 py-1.5 font-medium text-blue-50 hover:bg-gray-800">Оформити</button>
+        <button class="mt-6 w-full rounded-md bg-gray-600 py-1.5 font-medium text-blue-50 hover:bg-gray-800">Оформити замовлення</button>
       </div>
     </div>
   </div>

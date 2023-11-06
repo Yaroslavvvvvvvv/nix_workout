@@ -57,6 +57,21 @@ const routes = [
         component: () => import('./views/products/LowBars.vue')
     },
     {
+        path: '/first_low_bars',
+        name: 'first_low_bars',
+        component: () => import('./views/details/low_bars/FirstLowBars.vue')
+    },
+    {
+        path: '/second_low_bars',
+        name: 'second_low_bars',
+        component: () => import('./views/details/low_bars/SecondLowBars.vue')
+    },
+    {
+        path: '/third_low_bars',
+        name: 'third_low_bars',
+        component: () => import('./views/details/low_bars/ThirdLowBars.vue')
+    },
+    {
         path: '/stand',
         name: 'stand',
         component: () => import('./views/products/Stand.vue')
