@@ -4,7 +4,7 @@
     <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
       <div class="rounded-lg md:w-2/3">
         <div class="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start"
-             v-for="product in cart" :key="product.id">
+             v-for="product in store.state.cart" :key="product.id">
           <img :src="product.image" alt="product-image" class="w-full rounded-lg sm:w-40" />
           <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
             <div class="mt-5 sm:mt-0">
@@ -51,10 +51,7 @@ const store = useStore();
 
 const cart = store.state.cart;
 const removeItem = (product) => {
-  const index = cart.indexOf(product);
-  if (index !== -1) {
-    cart.splice(index, 1);
-  }
+  store.dispatch('removeFromCart', product);
 }
 const totalPrice = computed(() => {
   return cart.reduce((total, product) => total + product.price, 0);
