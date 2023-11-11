@@ -147,6 +147,66 @@ const routes = [
         component: () => import('./views/products/Rubber.vue')
     },
     {
+        path: '/yellow_rubber',
+        name: 'yellow_rubber',
+        component: () => import('./views/details/rubber_details/YellowRubber.vue')
+    },
+    {
+        path: '/red_rubber',
+        name: 'red_rubber',
+        component: () => import('./views/details/rubber_details/RedRubber.vue')
+    },
+    {
+        path: '/black_rubber',
+        name: 'black_rubber',
+        component: () => import('./views/details/rubber_details/BlackRubber.vue')
+    },
+    {
+        path: '/violet_rubber',
+        name: 'violet_rubber',
+        component: () => import('./views/details/rubber_details/VioletRubber.vue')
+    },
+    {
+        path: '/green_rubber',
+        name: 'green_rubber',
+        component: () => import('./views/details/rubber_details/GreenRubber.vue')
+    },
+    {
+        path: '/blue_rubber',
+        name: 'blue_rubber',
+        component: () => import('./views/details/rubber_details/BlueRubber.vue')
+    },
+    {
+        path: '/yellow_second',
+        name: 'yellow-second',
+        component: () => import('./views/details/rubber_details/YellowSecond.vue')
+    },
+    {
+        path: '/red_second',
+        name: 'red-second',
+        component: () => import('./views/details/rubber_details/RedSecond.vue')
+    },
+    {
+        path: '/black_second',
+        name: 'black-second',
+        component: () => import('./views/details/rubber_details/BlackSecond.vue')
+    },
+    {
+        path: '/violet_second',
+        name: 'violet-second',
+        component: () => import('./views/details/rubber_details/VioletSecond.vue')
+    },
+    {
+        path: '/green_second',
+        name: 'green-second',
+        component: () => import('./views/details/rubber_details/GreenSecond.vue')
+    },
+    {
+        path: '/blue_second',
+        name: 'blue-second',
+        component: () => import('./views/details/rubber_details/BlueSecond.vue')
+    },
+    {
         path: '/linings',
         name: 'linings',
         component: () => import('./views/products/Linings.vue')
