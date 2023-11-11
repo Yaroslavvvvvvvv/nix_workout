@@ -102,6 +102,46 @@ const routes = [
         component: () => import('./views/products/Paralets.vue')
     },
     {
+        path: '/first_paralets',
+        name: 'first-paralets',
+        component: () => import('./views/details/paralets_details/FirstParalets.vue')
+    },
+    {
+        path: '/second_paralets',
+        name: 'second-paralets',
+        component: () => import('./views/details/paralets_details/SecondParalets.vue')
+    },
+    {
+        path: '/third_paralets',
+        name: 'third-paralets',
+        component: () => import('./views/details/paralets_details/ThirdParalets.vue')
+    },
+    {
+        path: '/fourth_paralets',
+        name: 'fourth-paralets',
+        component: () => import('./views/details/paralets_details/FourthParalets.vue')
+    },
+    {
+        path: '/fifth_paralets',
+        name: 'fifth-paralets',
+        component: () => import('./views/details/paralets_details/FifthParalets.vue')
+    },
+    {
+        path: '/six_paralets',
+        name: 'six-paralets',
+        component: () => import('./views/details/paralets_details/SixParalets.vue')
+    },
+    {
+        path: '/six_paralets',
+        name: 'six-paralets',
+        component: () => import('./views/details/paralets_details/SixParalets.vue')
+    },
+    {
+        path: '/seven_paralets',
+        name: 'seven-paralets',
+        component: () => import('./views/details/paralets_details/SevenParalets.vue')
+    },
+    {
         path: '/rubber',
         name: 'rubber',
         component: () => import('./views/products/Rubber.vue')
