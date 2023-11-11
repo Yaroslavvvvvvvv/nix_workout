@@ -77,6 +77,26 @@ const routes = [
         component: () => import('./views/products/Stand.vue')
     },
     {
+        path: '/first_stand',
+        name: 'first-stand',
+        component: () => import('./views/details/stand_details/FirstStand.vue')
+    },
+    {
+        path: '/second_stand',
+        name: 'second-stand',
+        component: () => import('./views/details/stand_details/SecondStand.vue')
+    },
+    {
+        path: '/third_stand',
+        name: 'third-stand',
+        component: () => import('./views/details/stand_details/ThirdStand.vue')
+    },
+    {
+        path: '/fourth_stand',
+        name: 'fourth-stand',
+        component: () => import('./views/details/stand_details/FourthStand.vue')
+    },
+    {
         path: '/paralets',
         name: 'paralets',
         component: () => import('./views/products/Paralets.vue')

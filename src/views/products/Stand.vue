@@ -20,7 +20,7 @@ onMounted(async () => {
            gap-y-20 gap-x-14 mt-10 mb-5 ">
     <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl animate-fade-down animate-duration-1000"
          v-for="items in standData" :key="items.id">
-      <a href="#">
+      <router-link :to="`/${items.path}`">
         <img :src="items.image"
              alt="Product" class="w-72 object-cover rounded-t-xl h-auto" />
         <div class="px-4 py-3 w-72">
@@ -37,7 +37,7 @@ onMounted(async () => {
             </svg></div>
           </div>
         </div>
-      </a>
+      </router-link>
     </div>
   </section>
 </template>
