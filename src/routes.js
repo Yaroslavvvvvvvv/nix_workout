@@ -231,6 +231,21 @@ const routes = [
         name: 'magnesium',
         component: () => import('./views/products/Magnesium.vue')
     },
+    {
+        path: '/first_magnesium',
+        name: 'first-magnesium',
+        component: () => import('./views/details/magnesium_details/FirstMagnesium.vue')
+    },
+    {
+        path: '/second_magnesium',
+        name: 'second-magnesium',
+        component: () => import('./views/details/magnesium_details/SecondMagnesium.vue')
+    },
+    {
+        path: '/third_magnesium',
+        name: 'third-magnesium',
+        component: () => import('./views/details/magnesium_details/ThirdMagnesium.vue')
+    },
 ];
 
 const router = createRouter({
