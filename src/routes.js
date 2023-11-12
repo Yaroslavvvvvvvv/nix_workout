@@ -212,6 +212,16 @@ const routes = [
         component: () => import('./views/products/Linings.vue')
     },
     {
+        path: '/first_linings',
+        name: 'first-linings',
+        component: () => import('./views/details/linings_details/FirstLinings.vue')
+    },
+    {
+        path: '/second_linings',
+        name: 'second-linings',
+        component: () => import('./views/details/linings_details/SecondLinings.vue')
+    },
+    {
         path: '/bandages',
         name: 'bandages',
         component: () => import('./views/products/Bandages.vue')
