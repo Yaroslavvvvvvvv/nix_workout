@@ -232,6 +232,121 @@ const routes = [
         component: () => import('./views/details/bandages_details/NarutoOld.vue')
     },
     {
+        path: '/brain_power',
+        name: 'brain-power',
+        component: () => import('./views/details/bandages_details/BrainPower.vue')
+    },
+    {
+        path: '/dark_nix',
+        name: 'dark-nix',
+        component: () => import('./views/details/bandages_details/DarkNix.vue')
+    },
+    {
+        path: '/space',
+        name: 'space',
+        component: () => import('./views/details/bandages_details/Space.vue')
+    },
+    {
+        path: '/coconut',
+        name: 'coconut',
+        component: () => import('./views/details/bandages_details/Coconut.vue')
+    },
+    {
+        path: '/naruto_new',
+        name: 'naruto-new',
+        component: () => import('./views/details/bandages_details/NarutoNew.vue')
+    },
+    {
+        path: '/black',
+        name: 'black',
+        component: () => import('./views/details/bandages_details/Black.vue')
+    },
+    {
+        path: '/dark',
+        name: 'dark',
+        component: () => import('./views/details/bandages_details/Dark.vue')
+    },
+    {
+        path: '/yellow',
+        name: 'yellow',
+        component: () => import('./views/details/bandages_details/Yellow.vue')
+    },
+    {
+        path: '/toxic',
+        name: 'toxic',
+        component: () => import('./views/details/bandages_details/Toxic.vue')
+    },
+    {
+        path: '/pizza',
+        name: 'pizza',
+        component: () => import('./views/details/bandages_details/Pizza.vue')
+    },
+    {
+        path: '/skull',
+        name: 'skull',
+        component: () => import('./views/details/bandages_details/Skull.vue')
+    },
+    {
+        path: '/purple_paradise',
+        name: 'purple-paradise',
+        component: () => import('./views/details/bandages_details/PurpleParadise.vue')
+    },
+    {
+        path: '/sasuke_itachi',
+        name: 'sasuke-itachi',
+        component: () => import('./views/details/bandages_details/SasukeItachi.vue')
+    },
+    {
+        path: '/white_nix',
+        name: 'white-nix',
+        component: () => import('./views/details/bandages_details/WhiteNix.vue')
+    },
+    {
+        path: '/purple_fire',
+        name: 'purple-fire',
+        component: () => import('./views/details/bandages_details/PurpleFire.vue')
+    },
+    {
+        path: '/pink',
+        name: 'pink',
+        component: () => import('./views/details/bandages_details/Pink.vue')
+    },
+    {
+        path: '/blue_paradise',
+        name: 'blue-paradise',
+        component: () => import('./views/details/bandages_details/BlueParadise.vue')
+    },
+    {
+        path: '/purple_space',
+        name: 'purple_space',
+        component: () => import('./views/details/bandages_details/PurpleSpace.vue')
+    },
+    {
+        path: '/black_fire',
+        name: 'black_fire',
+        component: () => import('./views/details/bandages_details/BlackFire.vue')
+    },
+    {
+        path: '/blood',
+        name: 'blood',
+        component: () => import('./views/details/bandages_details/Blood.vue')
+    },
+    {
+        path: '/donuts',
+        name: 'donuts',
+        component: () => import('./views/details/bandages_details/Donuts.vue')
+    },
+    {
+        path: '/ice',
+        name: 'ice',
+        component: () => import('./views/details/bandages_details/Ice.vue')
+    },
+    {
+        path: '/white',
+        name: 'white',
+        component: () => import('./views/details/bandages_details/White.vue')
+    },
+    {
         path: '/magnesium',
         name: 'magnesium',
         component: () => import('./views/products/Magnesium.vue')
