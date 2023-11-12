@@ -227,6 +227,11 @@ const routes = [
         component: () => import('./views/products/Bandages.vue')
     },
     {
+        path: '/naruto_old',
+        name: 'naruto-old',
+        component: () => import('./views/details/bandages_details/NarutoOld.vue')
+    },
+    {
         path: '/magnesium',
         name: 'magnesium',
         component: () => import('./views/products/Magnesium.vue')
