@@ -29,6 +29,9 @@
 <script>
 import { db } from '../../../firebaseConfig.js'
 import { getDoc, doc } from 'firebase/firestore'
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
+
 
 export default {
   data() {
@@ -66,8 +69,8 @@ export default {
         name: this.productData.name,
         price: this.productData.price,
       };
-
       this.$store.dispatch('addToCart', productToAdd);
+      toast.success(`${this.productData.name} доданний у кошик!`);
       console.log('Product added to cart:', productToAdd);
     },
   },

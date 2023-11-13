@@ -5,6 +5,7 @@ import router from './routes';
 import store from './vuex/store.js';
 
 
+
 const app = createApp(App);
 app.use(router);
 app.use(store);
