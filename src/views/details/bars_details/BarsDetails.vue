@@ -70,7 +70,7 @@ export default {
         price: this.productData.price,
       };
       this.$store.dispatch('addToCart', productToAdd);
-      toast.success(`${this.productData.name} доданний у кошик!`);
+      toast.success(`${this.productData.name} доданий у кошик!`);
       console.log('Product added to cart:', productToAdd);
     },
   },
