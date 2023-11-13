@@ -95,8 +95,6 @@ const cartItemCount = computed(() => store.getters.cartItemCount);
               <router-link to="/catalog" class="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-100/50">Каталог</router-link>
               <router-link to="/delivery" class="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-100/50">Доставка і оплата</router-link>
               <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-100/50">Зв'язок з нами</a>
-              <router-link to="/shopping"
-                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-100/50">Кошик</router-link>
             </div>
           </div>
         </div>
