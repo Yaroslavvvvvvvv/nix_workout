@@ -30,7 +30,7 @@
 import { db } from '../../../firebaseConfig.js'
 import { getDoc, doc } from 'firebase/firestore'
 import {toast} from "vue3-toastify";
-
+import 'vue3-toastify/dist/index.css';
 export default {
   data() {
     return {
