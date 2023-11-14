@@ -27,6 +27,11 @@ const routes = [
         component: () => import('./components/ShoppingCart.vue')
     },
     {
+        path: '/order_form',
+        name: 'order-form',
+        component: () => import('./components/OrderForm.vue')
+    },
+    {
         path: '/bars',
         name: 'bars',
         component: () => import('./views/products/Bars.vue')
