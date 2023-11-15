@@ -46,7 +46,7 @@
         </div>
 
         <div class="relative z-0 w-full mb-6 group">
-          <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone"
+          <input type="tel"  name="floating_phone" id="floating_phone"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -57,6 +57,58 @@
                    rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
                    peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
                    peer-focus:-translate-y-6">Введіть Ваш телефон</label>
+        </div>
+        <div class="relative z-0 w-full mb-6 group">
+          <input type="text"  name="floating_number" id="floating_number"
+                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
+                  appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
+                  focus:ring-0 focus:border-blue-600 peer"
+                 placeholder=" " required/>
+          <label for="floating_number"
+                 class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300
+                   transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0
+                   rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
+                   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
+                   peer-focus:-translate-y-6">№ відділення Нової Пошти</label>
+        </div>
+        <div class="relative z-0 w-full mb-6 group">
+          <input type="text"  name="floating_address" id="floating_address"
+                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
+                  appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
+                  focus:ring-0 focus:border-blue-600 peer"
+                 placeholder=" " required/>
+          <label for="floating_address"
+                 class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300
+                   transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0
+                   rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
+                   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
+                   peer-focus:-translate-y-6">Адреса</label>
+        </div>
+        <div class="relative z-0 w-full mb-6 group">
+          <input type="text"  name="floating_town" id="floating_town"
+                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
+                  appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
+                  focus:ring-0 focus:border-blue-600 peer"
+                 placeholder=" " required/>
+          <label for="floating_town"
+                 class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300
+                   transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0
+                   rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
+                   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
+                   peer-focus:-translate-y-6">Місто</label>
+        </div>
+        <div class="relative z-0 w-full mb-6 group">
+          <input type="tel"  name="floating_index"  id="floating_index"
+                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
+                  appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
+                  focus:ring-0 focus:border-blue-600 peer"
+                 placeholder=" " required/>
+          <label for="floating_index"
+                 class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300
+                   transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0
+                   rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
+                   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
+                   peer-focus:-translate-y-6">Поштовий індекс</label>
         </div>
         <div class="text-center">
           <button type="submit"
@@ -86,7 +138,7 @@
                    peer-focus:-translate-y-6">Вкажіть Ваше Ім'я</label>
           </div>
           <div class="relative z-0 w-full mb-6 group">
-            <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone"
+            <input type="tel" name="floating_phone" id="floating_phone"
                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
