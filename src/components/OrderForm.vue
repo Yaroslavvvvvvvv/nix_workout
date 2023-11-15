@@ -1,8 +1,10 @@
 <template>
   <div class="bg-gray-100 pt-20 pb-20 animate-fade-down animate-duration-1000">
-    <div class="mx-auto max-w-5xl px-6 md:flex md:space-x-6 xl:px-0">
+    <div class="mx-auto max-w-5xl px-6 md:flex md:space-x-6 xl:px-0 justify-center">
       <form>
-        <h3 class="font-bold mb-2">ОСОБИСТІ ДАНІ:</h3>
+        <div class="text-center">
+          <h3 class="font-bold mb-2">ОСОБИСТІ ДАНІ:</h3>
+        </div>
         <div class="relative z-0 w-full mb-6 group">
           <input type="email" name="floating_email" id="floating_email"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
@@ -120,9 +122,11 @@
         </div>
       </form>
     </div>
-    <div class="mx-auto max-w-5xl px-6 md:flex md:space-x-6 xl:px-0">
+    <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
       <form>
-        <h3 class="font-bold mt-10 mb-2">ЗАМОВИТИ БЕЗ ОФОРМЛЕННЯ</h3>
+        <div class="text-center">
+          <h3 class="font-bold mt-10 mb-2">ЗАМОВИТИ БЕЗ ОФОРМЛЕННЯ</h3>
+        </div>
         <div class="grid md:grid-cols-2 md:gap-6">
           <div class="relative z-0 w-full mb-6 group">
             <input type="text" name="floating_first_name" id="floating_first_name"
@@ -161,11 +165,62 @@
         </div>
       </form>
     </div>
+    <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0 mt-20">
+      <div class="rounded-lg md:w-2/3">
+        <div class="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start"
+             v-for="product in store.state.cart" :key="product.id">
+          <img :src="product.image" alt="product-image" class="w-full rounded-lg sm:w-40"/>
+          <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
+            <div class="mt-5 sm:mt-0">
+              <h2 class="text-lg font-bold text-gray-900">{{ product.name }}</h2>
+            </div>
+            <div class="mt-4 flex justify-between im sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
+              <div class="flex items-center border-gray-100">
+                <span class="text-base font-bold text-gray-900 logo">NIX</span>
+              </div>
+              <div class="flex items-center space-x-4">
+                <p class="text-lg font-medium">{{ product.price }} грн</p>
+                <svg @click="removeItem(product)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                     stroke-width="1.5" stroke="currentColor"
+                     class="h-5 w-5 cursor-pointer duration-150 hover:text-gray-500">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div v-if="cart.length === 0">
+          <p class="text-center text-2xl font-bold text-gray-950">Ваш кошик порожній</p>
+        </div>
+      </div>
+      <div class="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
+
+        <hr class="my-4"/>
+        <div class="flex justify-between">
+          <p class="text-lg font-bold">Загалом</p>
+          <div class="font-bold">
+            <p class="mb-1 text-lg font-bold">{{ totalPrice }} грн</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
+import {computed} from 'vue';
 
+import {useStore} from 'vuex';
+
+const store = useStore();
+
+const cart = store.state.cart;
+const removeItem = (product) => {
+  store.dispatch('removeFromCart', product);
+}
+const totalPrice = computed(() => {
+  return cart.reduce((total, product) => total + product.price, 0);
+});
 </script>
 <style scoped>
 </style>
