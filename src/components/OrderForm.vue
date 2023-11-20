@@ -141,7 +141,7 @@
     <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
       <form v-show="activeTab === 'noRegistration'">
         <div class="text-center">
-          <h3 class="font-bold mt-10 mb-2">ЗАМОВИТИ БЕЗ ОФОРМЛЕННЯ</h3>
+          <h3 class="font-bold mb-2">ЗАМОВИТИ БЕЗ ОФОРМЛЕННЯ:</h3>
         </div>
         <div class="grid md:grid-cols-2 md:gap-6">
           <div class="relative z-0 w-full mb-6 group">
