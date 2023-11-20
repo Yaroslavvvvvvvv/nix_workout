@@ -1,7 +1,23 @@
 <template>
   <div class="bg-gray-100 pt-20 pb-20 animate-fade-down animate-duration-1000">
+    <div class="flex mb-6 justify-center">
+      <div
+          class="cursor-pointer px-4 py-2 text-gray-600 rounded-tl-lg"
+          @click="activeTab = 'order'"
+          :class="{ 'bg-gray-300': activeTab === 'order' }"
+      >
+        Заповнити форму
+      </div>
+      <div
+          class="cursor-pointer px-4 py-2 text-gray-600 rounded-tr-lg"
+          @click="activeTab = 'noRegistration'"
+          :class="{ 'bg-gray-300': activeTab === 'noRegistration' }"
+      >
+        Швидке замовлення
+      </div>
+    </div>
     <div class="mx-auto max-w-5xl px-6 md:flex md:space-x-6 xl:px-0 justify-center">
-      <form>
+      <form v-show="activeTab === 'order'">
         <div class="text-center">
           <h3 class="font-bold mb-2">ОСОБИСТІ ДАНІ:</h3>
         </div>
@@ -114,7 +130,7 @@
         </div>
         <div class="text-center">
           <button type="submit"
-                  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300
+                  class="text-white bg-gray-600 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300
                 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600
                 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             ОФОРМИТИ ЗАМОВЛЕННЯ
@@ -123,7 +139,7 @@
       </form>
     </div>
     <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
-      <form>
+      <form v-show="activeTab === 'noRegistration'">
         <div class="text-center">
           <h3 class="font-bold mt-10 mb-2">ЗАМОВИТИ БЕЗ ОФОРМЛЕННЯ</h3>
         </div>
@@ -157,7 +173,7 @@
         </div>
         <div class="text-center">
           <button type="submit"
-                  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300
+                  class="text-white bg-gray-600 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300
                 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600
                 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             ЧЕКАЮ ДЗВІНКА
@@ -208,7 +224,7 @@
 </template>
 
 <script setup>
-import {computed} from 'vue';
+import {computed, ref} from 'vue';
 
 import {useStore} from 'vuex';
 
@@ -221,6 +237,7 @@ const removeItem = (product) => {
 const totalPrice = computed(() => {
   return cart.reduce((total, product) => total + product.price, 0);
 });
+const activeTab = ref('order');
 </script>
 <style scoped>
 </style>
