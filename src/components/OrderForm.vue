@@ -17,12 +17,12 @@
       </div>
     </div>
     <div class="mx-auto max-w-5xl px-6 md:flex md:space-x-6 xl:px-0 justify-center">
-      <Form v-show="activeTab === 'order'">
+      <Form v-show="activeTab === 'order'" :validation-schema="schema">
         <div class="text-center">
           <h3 class="font-bold mb-2">ОСОБИСТІ ДАНІ:</h3>
         </div>
         <div class="relative z-0 w-full mb-6 group">
-          <Field :rules="isRequired" type="email" name="floating_email" id="floating_email"
+          <Field  type="email" name="floating_email" id="floating_email"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -37,7 +37,7 @@
         </div>
         <div class="grid md:grid-cols-2 md:gap-6">
           <div class="relative z-0 w-full mb-6 group">
-            <Field :rules="isRequired" type="text" name="floating_first_name" id="floating_first_name"
+            <Field type="text" name="floating_first_name" id="floating_first_name"
                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2
                    border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500
                    focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -51,7 +51,7 @@
             <ErrorMessage class="text-red-700" name="floating_first_name"/>
           </div>
           <div class="relative z-0 w-full mb-6 group">
-            <Field :rules="isRequired" type="text" name="floating_last_name" id="floating_last_name"
+            <Field type="text" name="floating_last_name" id="floating_last_name"
                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2
                    border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500
                    focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -67,7 +67,7 @@
         </div>
 
         <div class="relative z-0 w-full mb-6 group">
-          <Field :rules="isRequired" type="tel"  name="floating_phone" id="floating_phone"
+          <Field type="tel"  name="floating_phone" id="floating_phone"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -81,7 +81,7 @@
           <ErrorMessage class="text-red-700" name="floating_phone"/>
         </div>
         <div class="relative z-0 w-full mb-6 group">
-          <Field :rules="isRequired" type="text"  name="floating_number" id="floating_number"
+          <Field type="text"  name="floating_number" id="floating_number"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -95,7 +95,7 @@
           <ErrorMessage class="text-red-700" name="floating_number"/>
         </div>
         <div class="relative z-0 w-full mb-6 group">
-          <Field :rules="isRequired" type="text"  name="floating_address" id="floating_address"
+          <Field type="text"  name="floating_address" id="floating_address"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -109,7 +109,7 @@
           <ErrorMessage class="text-red-700" name="floating_address"/>
         </div>
         <div class="relative z-0 w-full mb-6 group">
-          <Field :rules="isRequired" type="text"  name="floating_town" id="floating_town"
+          <Field type="text"  name="floating_town" id="floating_town"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -123,7 +123,7 @@
           <ErrorMessage class="text-red-700" name="floating_town"/>
         </div>
         <div class="relative z-0 w-full mb-6 group">
-          <Field :rules="isRequired" type="tel"  name="floating_index"  id="floating_index"
+          <Field type="tel"  name="floating_index"  id="floating_index"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -147,13 +147,13 @@
       </Form>
     </div>
     <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
-      <Form v-show="activeTab === 'noRegistration'">
+      <Form v-show="activeTab === 'noRegistration'" :validation-schema="schema">
         <div class="text-center">
           <h3 class="font-bold mb-2">ЗАМОВИТИ БЕЗ ОФОРМЛЕННЯ:</h3>
         </div>
         <div class="grid md:grid-cols-2 md:gap-6">
           <div class="relative z-0 w-full mb-6 group">
-            <Field :rules="isRequired" type="text" name="floating_first_name" id="floating_first_name"
+            <Field type="text" name="floating_first_name" id="floating_first_name"
                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -167,7 +167,7 @@
             <ErrorMessage class="text-red-700" name="floating_first_name"/>
           </div>
           <div class="relative z-0 w-full mb-6 group">
-            <Field :rules="isRequired" type="tel" name="floating_phone" id="floating_phone"
+            <Field type="tel" name="floating_phone" id="floating_phone"
                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -237,13 +237,27 @@
 import {computed, ref} from 'vue';
 import {useStore} from 'vuex';
 import { Field, Form, ErrorMessage } from 'vee-validate';
+import * as yup from 'yup';
 
-function isRequired(value) {
-  if (value && value.trim()) {
-    return true;
-  }
-  return 'Це поле має бути заповнене';
-}
+const schema = yup.object({
+  floating_email: yup.string().email('Некоректний e-mail').required('Це поле має бути заповнене'),
+  floating_first_name: yup.string().matches(/^[a-zA-ZА-Яа-яЁё\s\-']+$/, 'Введіть справжнє ім\'я')
+      .max(15).required('Це поле має бути заповнене'),
+  floating_last_name: yup.string().matches(/^[a-zA-ZА-Яа-яЁё\s\-']+$/, 'Введіть справжнє ім\'я')
+      .max(15).required('Це поле має бути заповнене'),
+  floating_phone: yup.string()
+      .matches(/^(\+380\d{9}|0\d{9})$/, 'Введіть коректний номер мобільного телефону')
+      .required('Це поле має бути заповнене'),
+  floating_number: yup.string()
+      .matches(/^\d{1,3}$/, 'Введіть коректний номер відділення Нової Пошти')
+      .required('Це поле має бути заповнене'),
+  floating_address: yup.string().required('Це поле має бути заповнене'),
+  floating_city: yup.string().required('Це поле має бути заповнене'),
+  floating_index: yup.string()
+      .matches(/^\d{1,5}$/, 'Введіть коректний Поштовий індекс')
+      .required('Це поле має бути заповнене'),
+});
+
 const store = useStore();
 
 const cart = store.state.cart;
