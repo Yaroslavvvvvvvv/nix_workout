@@ -17,12 +17,12 @@
       </div>
     </div>
     <div class="mx-auto max-w-5xl px-6 md:flex md:space-x-6 xl:px-0 justify-center">
-      <form v-show="activeTab === 'order'">
+      <Form v-show="activeTab === 'order'">
         <div class="text-center">
           <h3 class="font-bold mb-2">ОСОБИСТІ ДАНІ:</h3>
         </div>
         <div class="relative z-0 w-full mb-6 group">
-          <input type="email" name="floating_email" id="floating_email"
+          <Field :rules="isRequired" type="email" name="floating_email" id="floating_email"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -33,10 +33,11 @@
                  rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500
                  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
                  peer-focus:-translate-y-6">Вкажіть Ваш E-mail</label>
+          <ErrorMessage class="text-red-700" name="floating_email" />
         </div>
         <div class="grid md:grid-cols-2 md:gap-6">
           <div class="relative z-0 w-full mb-6 group">
-            <input type="text" name="floating_first_name" id="floating_first_name"
+            <Field :rules="isRequired" type="text" name="floating_first_name" id="floating_first_name"
                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2
                    border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500
                    focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -47,9 +48,10 @@
                    rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
                    peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
                    peer-focus:-translate-y-6">Вкажіть Ваше Ім'я</label>
+            <ErrorMessage class="text-red-700" name="floating_first_name"/>
           </div>
           <div class="relative z-0 w-full mb-6 group">
-            <input type="text" name="floating_last_name" id="floating_last_name"
+            <Field :rules="isRequired" type="text" name="floating_last_name" id="floating_last_name"
                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2
                    border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500
                    focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -60,11 +62,12 @@
                    rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
                    peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
                    peer-focus:-translate-y-6">Вкажіть Ваше прізвище</label>
+            <ErrorMessage class="text-red-700" name="floating_last_name"/>
           </div>
         </div>
 
         <div class="relative z-0 w-full mb-6 group">
-          <input type="tel"  name="floating_phone" id="floating_phone"
+          <Field :rules="isRequired" type="tel"  name="floating_phone" id="floating_phone"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -75,9 +78,10 @@
                    rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
                    peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
                    peer-focus:-translate-y-6">Введіть Ваш телефон</label>
+          <ErrorMessage class="text-red-700" name="floating_phone"/>
         </div>
         <div class="relative z-0 w-full mb-6 group">
-          <input type="text"  name="floating_number" id="floating_number"
+          <Field :rules="isRequired" type="text"  name="floating_number" id="floating_number"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -88,9 +92,10 @@
                    rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
                    peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
                    peer-focus:-translate-y-6">№ відділення Нової Пошти</label>
+          <ErrorMessage class="text-red-700" name="floating_number"/>
         </div>
         <div class="relative z-0 w-full mb-6 group">
-          <input type="text"  name="floating_address" id="floating_address"
+          <Field :rules="isRequired" type="text"  name="floating_address" id="floating_address"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -101,9 +106,10 @@
                    rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
                    peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
                    peer-focus:-translate-y-6">Адреса</label>
+          <ErrorMessage class="text-red-700" name="floating_address"/>
         </div>
         <div class="relative z-0 w-full mb-6 group">
-          <input type="text"  name="floating_town" id="floating_town"
+          <Field :rules="isRequired" type="text"  name="floating_town" id="floating_town"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -114,9 +120,10 @@
                    rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
                    peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
                    peer-focus:-translate-y-6">Місто</label>
+          <ErrorMessage class="text-red-700" name="floating_town"/>
         </div>
         <div class="relative z-0 w-full mb-6 group">
-          <input type="tel"  name="floating_index"  id="floating_index"
+          <Field :rules="isRequired" type="tel"  name="floating_index"  id="floating_index"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -127,6 +134,7 @@
                    rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
                    peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
                    peer-focus:-translate-y-6">Поштовий індекс</label>
+          <ErrorMessage class="text-red-700" name="floating_index"/>
         </div>
         <div class="text-center">
           <button type="submit"
@@ -136,16 +144,16 @@
             ОФОРМИТИ ЗАМОВЛЕННЯ
           </button>
         </div>
-      </form>
+      </Form>
     </div>
     <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
-      <form v-show="activeTab === 'noRegistration'">
+      <Form v-show="activeTab === 'noRegistration'">
         <div class="text-center">
           <h3 class="font-bold mb-2">ЗАМОВИТИ БЕЗ ОФОРМЛЕННЯ:</h3>
         </div>
         <div class="grid md:grid-cols-2 md:gap-6">
           <div class="relative z-0 w-full mb-6 group">
-            <input type="text" name="floating_first_name" id="floating_first_name"
+            <Field :rules="isRequired" type="text" name="floating_first_name" id="floating_first_name"
                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -156,9 +164,10 @@
                    rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
                    peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
                    peer-focus:-translate-y-6">Вкажіть Ваше Ім'я</label>
+            <ErrorMessage class="text-red-700" name="floating_first_name"/>
           </div>
           <div class="relative z-0 w-full mb-6 group">
-            <input type="tel" name="floating_phone" id="floating_phone"
+            <Field :rules="isRequired" type="tel" name="floating_phone" id="floating_phone"
                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -169,6 +178,7 @@
                    rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
                    peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
                    peer-focus:-translate-y-6">Введіть Ваш телефон</label>
+            <ErrorMessage class="text-red-700" name="floating_phone"/>
           </div>
         </div>
         <div class="text-center">
@@ -179,7 +189,7 @@
             ЧЕКАЮ ДЗВІНКА
           </button>
         </div>
-      </form>
+      </Form>
     </div>
     <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0 mt-20">
       <div class="rounded-lg md:w-2/3">
@@ -225,9 +235,15 @@
 
 <script setup>
 import {computed, ref} from 'vue';
-
 import {useStore} from 'vuex';
+import { Field, Form, ErrorMessage } from 'vee-validate';
 
+function isRequired(value) {
+  if (value && value.trim()) {
+    return true;
+  }
+  return 'Це поле має бути заповнене';
+}
 const store = useStore();
 
 const cart = store.state.cart;
