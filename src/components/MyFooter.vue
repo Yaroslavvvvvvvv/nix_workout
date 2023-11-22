@@ -41,13 +41,13 @@
               </a>
             </li>
             <li>
-              <a href="tel:+380123456789"> <span class="font-bold text-lg">+38 063 243 49 93</span></a>
+              <a href="tel:+380632434993"> <span class="font-bold text-lg">+38 063 243 49 93</span></a>
             </li>
           </ul>
         </div>
         <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"/>
         <span class="block text-sm text-white sm:text-center dark:text-gray-400">
-          ©Created by Yaroslav Kovalchuk 2023
+          ©Created by Yaroslav Kovalchuk 2023<br>
           All rights Reserved
         </span>
       </div>
