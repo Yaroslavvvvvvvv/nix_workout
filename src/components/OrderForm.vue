@@ -252,7 +252,7 @@ const schema = yup.object({
       .matches(/^\d{1,3}$/, 'Введіть коректний номер відділення Нової Пошти')
       .required('Це поле має бути заповнене'),
   floating_address: yup.string().required('Це поле має бути заповнене'),
-  floating_city: yup.string().required('Це поле має бути заповнене'),
+  floating_town: yup.string().required('Це поле має бути заповнене'),
   floating_index: yup.string()
       .matches(/^\d{1,5}$/, 'Введіть коректний Поштовий індекс')
       .required('Це поле має бути заповнене'),
