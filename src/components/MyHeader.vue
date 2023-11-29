@@ -53,7 +53,7 @@ const cartItemCount = computed(() => store.getters.cartItemCount);
         <router-link to="/about" class="text-lg font-bold leading-6 text-gray-300 hover:text-white">Про нас</router-link>
         <router-link to="/catalog" class="text-lg font-bold leading-6 text-gray-300 hover:text-white">Каталог</router-link>
         <router-link to="/delivery" class="text-lg font-bold leading-6 text-gray-300 hover:text-white">Доставка і оплата</router-link>
-        <a href="#" class="text-lg font-bold leading-6 text-gray-300 hover:text-white">Зв'язок з нами</a>
+        <router-link to="/contacts" class="text-lg font-bold leading-6 text-gray-300 hover:text-white">Зв'язок з нами</router-link>
       </PopoverGroup>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end justify-center items-center">
         <router-link to="/shopping">
@@ -94,7 +94,7 @@ const cartItemCount = computed(() => store.getters.cartItemCount);
               <router-link to="/about" class="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-100/50">Про нас</router-link>
               <router-link to="/catalog" class="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-100/50">Каталог</router-link>
               <router-link to="/delivery" class="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-100/50">Доставка і оплата</router-link>
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-100/50">Зв'язок з нами</a>
+              <router-link to="/contacts" class="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-100/50">Зв'язок з нами</router-link>
             </div>
           </div>
         </div>
