@@ -37,6 +37,11 @@ const routes = [
         component: () => import('./components/OrderForm.vue')
     },
     {
+        path: '/successful_order',
+        name: '/successful_order',
+        component: () => import('./components/SuccessfulOrder.vue')
+    },
+    {
         path: '/bars',
         name: 'bars',
         component: () => import('./views/products/Bars.vue')

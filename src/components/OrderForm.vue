@@ -242,7 +242,9 @@ import { Field, Form, ErrorMessage } from 'vee-validate';
 import * as yup from 'yup';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from "../firebaseConfig.js";
+import {  useRouter } from 'vue-router';
 
+const { push } = useRouter();
 const formData = ref({
   user_email: '',
   user_first_name: '',
@@ -302,6 +304,7 @@ const onSubmit = async () => {
 
     const ordersCollection = collection(db, 'orders');
     const docRef = await addDoc(ordersCollection, formData.value);
+    await push('/successful_order');
     console.log('Дані для оформлення замовлення:', docRef.id);
   } catch (error) {
     if (error instanceof yup.ValidationError) {
@@ -325,6 +328,7 @@ const onFastSubmit = async () => {
 
     const fastOrdersCollection = collection(db, 'fast_orders');
     const docRef = await addDoc(fastOrdersCollection, fastFormData.value);
+    await push('/successful_order');
     console.log('Дані для оформлення швидкого замовлення:', docRef.id);
     // Ваша логика для отправки данных на сервер или других действий
   } catch (error) {
