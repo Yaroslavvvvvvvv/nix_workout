@@ -240,7 +240,8 @@ import {computed, ref} from 'vue';
 import {useStore} from 'vuex';
 import { Field, Form, ErrorMessage } from 'vee-validate';
 import * as yup from 'yup';
-
+import { collection, addDoc } from 'firebase/firestore';
+import { db } from "../firebaseConfig.js";
 
 const formData = ref({
   floating_email: '',
@@ -297,19 +298,16 @@ const onSubmit = async () => {
       name: product.name,
       price: product.price,
     }));
-
-    // Обновляем общую стоимость в formData
     formData.value.totalPrice = totalPrice.value;
 
-    // Выводим данные в консоль
-    console.log('Данные для оформления заказа:', formData.value);
-    // Ваша логика для отправки данных на сервер или других действий
+    const ordersCollection = collection(db, 'orders');
+    const docRef = await addDoc(ordersCollection, formData.value);
+    console.log('Дані для оформлення замовлення:', docRef.id);
   } catch (error) {
     if (error instanceof yup.ValidationError) {
-      // Обработка ошибок валидации
-      console.error('Ошибки валидации формы заказа:', error.errors);
+      console.error('Помилка валідації форми замовлення:', error.errors);
     } else {
-      console.error('Произошла ошибка:', error);
+      console.error('Виникла помилка:', error);
     }
   }
 };
@@ -323,19 +321,18 @@ const onFastSubmit = async () => {
       name: product.name,
       price: product.price,
     }));
-
-    // Обновляем общую стоимость в formData
     fastFormData.value.totalPrice = totalPrice.value;
 
-    // Выводим данные в консоль
-    console.log('Данные для оформления заказа:', fastFormData.value);
+    const fastOrdersCollection = collection(db, 'fast_orders');
+    const docRef = await addDoc(fastOrdersCollection, fastFormData.value);
+    console.log('Дані для оформлення швидкого замовлення:', docRef.id);
     // Ваша логика для отправки данных на сервер или других действий
   } catch (error) {
     if (error instanceof yup.ValidationError) {
       // Обработка ошибок валидации
-      console.error('Ошибки валидации формы заказа:', error.errors);
+      console.error('Помилка валідації швидкого замовлення', error.errors);
     } else {
-      console.error('Произошла ошибка:', error);
+      console.error('Виникла помилка:', error);
     }
   }
 };
