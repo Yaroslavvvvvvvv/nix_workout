@@ -17,16 +17,16 @@
       </div>
     </div>
     <div class="mx-auto max-w-5xl px-6 md:flex md:space-x-6 xl:px-0 justify-center">
-      <Form v-show="activeTab === 'order'" :validation-schema="schema">
+      <Form v-show="activeTab === 'order'" :validation-schema="schema" @submit="onSubmit">
         <div class="text-center">
           <h3 class="font-bold mb-2">ОСОБИСТІ ДАНІ:</h3>
         </div>
         <div class="relative z-0 w-full mb-6 group">
-          <Field  type="email" name="floating_email" id="floating_email"
-                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
+          <Field  type="email" name="floating_email" id="floating_email" v-model="formData.floating_email"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
-                 placeholder=" " required/>
+                  placeholder=" " required/>
           <label for="floating_email"
                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform
                  -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4
@@ -37,7 +37,7 @@
         </div>
         <div class="grid md:grid-cols-2 md:gap-6">
           <div class="relative z-0 w-full mb-6 group">
-            <Field type="text" name="floating_first_name" id="floating_first_name"
+            <Field type="text" name="floating_first_name" id="floating_first_name" v-model="formData.floating_first_name"
                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2
                    border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500
                    focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -51,7 +51,7 @@
             <ErrorMessage class="text-red-700" name="floating_first_name"/>
           </div>
           <div class="relative z-0 w-full mb-6 group">
-            <Field type="text" name="floating_last_name" id="floating_last_name"
+            <Field type="text" name="floating_last_name" id="floating_last_name" v-model="formData.floating_last_name"
                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2
                    border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500
                    focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -67,7 +67,7 @@
         </div>
 
         <div class="relative z-0 w-full mb-6 group">
-          <Field type="tel"  name="floating_phone" id="floating_phone"
+          <Field type="tel"  name="floating_phone" id="floating_phone" v-model="formData.floating_phone"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -81,7 +81,7 @@
           <ErrorMessage class="text-red-700" name="floating_phone"/>
         </div>
         <div class="relative z-0 w-full mb-6 group">
-          <Field type="text"  name="floating_number" id="floating_number"
+          <Field type="text"  name="floating_number" id="floating_number" v-model="formData.floating_number"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -95,7 +95,7 @@
           <ErrorMessage class="text-red-700" name="floating_number"/>
         </div>
         <div class="relative z-0 w-full mb-6 group">
-          <Field type="text"  name="floating_address" id="floating_address"
+          <Field type="text"  name="floating_address" id="floating_address" v-model="formData.floating_address"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -109,7 +109,7 @@
           <ErrorMessage class="text-red-700" name="floating_address"/>
         </div>
         <div class="relative z-0 w-full mb-6 group">
-          <Field type="text"  name="floating_town" id="floating_town"
+          <Field type="text"  name="floating_town" id="floating_town" v-model="formData.floating_town"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -123,7 +123,7 @@
           <ErrorMessage class="text-red-700" name="floating_town"/>
         </div>
         <div class="relative z-0 w-full mb-6 group">
-          <Field type="tel"  name="floating_index"  id="floating_index"
+          <Field type="tel"  name="floating_index"  id="floating_index" v-model="formData.floating_index"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -138,6 +138,7 @@
         </div>
         <div class="text-center">
           <button type="submit"
+                  @click.prevent="onSubmit"
                   class="text-white bg-gray-600 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300
                 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600
                 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -147,13 +148,13 @@
       </Form>
     </div>
     <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
-      <Form v-show="activeTab === 'noRegistration'" :validation-schema="schema">
+      <Form v-show="activeTab === 'noRegistration'" :validation-schema="schema" @submit="onSubmit">
         <div class="text-center">
           <h3 class="font-bold mb-2">ЗАМОВИТИ БЕЗ ОФОРМЛЕННЯ:</h3>
         </div>
         <div class="grid md:grid-cols-2 md:gap-6">
           <div class="relative z-0 w-full mb-6 group">
-            <Field type="text" name="floating_first_name" id="floating_first_name"
+            <Field type="text" name="floating_first_name" id="floating_first_name" v-model="formData.floating_first_name"
                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -167,7 +168,7 @@
             <ErrorMessage class="text-red-700" name="floating_first_name"/>
           </div>
           <div class="relative z-0 w-full mb-6 group">
-            <Field type="tel" name="floating_phone" id="floating_phone"
+            <Field type="tel" name="floating_phone" id="floating_phone" v-model="formData.floating_phone"
                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -183,6 +184,7 @@
         </div>
         <div class="text-center">
           <button type="submit"
+                  @click.prevent="onSubmit"
                   class="text-white bg-gray-600 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300
                 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600
                 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -239,6 +241,20 @@ import {useStore} from 'vuex';
 import { Field, Form, ErrorMessage } from 'vee-validate';
 import * as yup from 'yup';
 
+
+const formData = ref({
+  floating_email: '',
+  floating_first_name: '',
+  floating_last_name: '',
+  floating_phone: '',
+  floating_number: '',
+  floating_address: '',
+  floating_town: '',
+  floating_index: '',
+  products: [],
+  totalPrice: 0,
+});
+
 const schema = yup.object({
   floating_email: yup.string().email('Некоректний e-mail').required('Це поле має бути заповнене'),
   floating_first_name: yup.string().matches(/^[a-zA-ZА-Яа-яЁё\s\-']+$/, 'Введіть справжнє ім\'я')
@@ -257,6 +273,34 @@ const schema = yup.object({
       .matches(/^\d{1,5}$/, 'Введіть коректний Поштовий індекс')
       .required('Це поле має бути заповнене'),
 });
+
+const onSubmit = async () => {
+  try {
+    // Валидация данных с использованием Yup
+    await schema.validate(formData.value, { abortEarly: false });
+
+    // Добавляем информацию о товарах в formData
+    formData.value.products = store.state.cart.map((product) => ({
+      name: product.name,
+      price: product.price,
+    }));
+
+    // Обновляем общую стоимость в formData
+    formData.value.totalPrice = totalPrice.value;
+
+    // Выводим данные в консоль
+    console.log('Данные для оформления заказа:', formData.value);
+    // Ваша логика для отправки данных на сервер или других действий
+  } catch (error) {
+    if (error instanceof yup.ValidationError) {
+      // Обработка ошибок валидации
+      console.error('Ошибки валидации формы заказа:', error.errors);
+    } else {
+      console.error('Произошла ошибка:', error);
+    }
+  }
+};
+
 
 const store = useStore();
 
