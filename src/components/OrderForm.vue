@@ -22,119 +22,119 @@
           <h3 class="font-bold mb-2">ОСОБИСТІ ДАНІ:</h3>
         </div>
         <div class="relative z-0 w-full mb-6 group">
-          <Field  type="email" name="floating_email" id="floating_email" v-model="formData.floating_email"
+          <Field  type="email" name="user_email" id="user_email" v-model="formData.user_email"
                   class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" " required/>
-          <label for="floating_email"
+          <label for="user_email"
                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform
                  -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4
                  rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500
                  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
                  peer-focus:-translate-y-6">Вкажіть Ваш E-mail</label>
-          <ErrorMessage class="text-red-700" name="floating_email" />
+          <ErrorMessage class="text-red-700" name="user_email" />
         </div>
         <div class="grid md:grid-cols-2 md:gap-6">
           <div class="relative z-0 w-full mb-6 group">
-            <Field type="text" name="floating_first_name" id="floating_first_name" v-model="formData.floating_first_name"
+            <Field type="text" name="user_first_name" id="user_first_name" v-model="formData.user_first_name"
                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2
                    border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500
                    focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                    placeholder=" " required/>
-            <label for="floating_first_name"
+            <label for="user_first_name"
                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300
                    transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0
                    rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
                    peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
                    peer-focus:-translate-y-6">Вкажіть Ваше Ім'я</label>
-            <ErrorMessage class="text-red-700" name="floating_first_name"/>
+            <ErrorMessage class="text-red-700" name="user_first_name"/>
           </div>
           <div class="relative z-0 w-full mb-6 group">
-            <Field type="text" name="floating_last_name" id="floating_last_name" v-model="formData.floating_last_name"
+            <Field type="text" name="user_last_name" id="user_last_name" v-model="formData.user_last_name"
                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2
                    border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500
                    focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                    placeholder=" " required/>
-            <label for="floating_last_name"
+            <label for="user_last_name"
                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300
                    transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0
                    rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
                    peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
                    peer-focus:-translate-y-6">Вкажіть Ваше прізвище</label>
-            <ErrorMessage class="text-red-700" name="floating_last_name"/>
+            <ErrorMessage class="text-red-700" name="user_last_name"/>
           </div>
         </div>
 
         <div class="relative z-0 w-full mb-6 group">
-          <Field type="tel"  name="floating_phone" id="floating_phone" v-model="formData.floating_phone"
+          <Field type="tel"  name="user_phone" id="user_phone" v-model="formData.user_phone"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
                  placeholder=" " required/>
-          <label for="floating_phone"
+          <label for="user_phone"
                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300
                    transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0
                    rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
                    peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
                    peer-focus:-translate-y-6">Введіть Ваш телефон</label>
-          <ErrorMessage class="text-red-700" name="floating_phone"/>
+          <ErrorMessage class="text-red-700" name="user_phone"/>
         </div>
         <div class="relative z-0 w-full mb-6 group">
-          <Field type="text"  name="floating_number" id="floating_number" v-model="formData.floating_number"
+          <Field type="text"  name="department_almost" id="department_almost" v-model="formData.department_almost"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
                  placeholder=" " required/>
-          <label for="floating_number"
+          <label for="department_almost"
                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300
                    transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0
                    rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
                    peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
                    peer-focus:-translate-y-6">№ відділення Нової Пошти</label>
-          <ErrorMessage class="text-red-700" name="floating_number"/>
+          <ErrorMessage class="text-red-700" name="department_almost"/>
         </div>
         <div class="relative z-0 w-full mb-6 group">
-          <Field type="text"  name="floating_address" id="floating_address" v-model="formData.floating_address"
+          <Field type="text"  name="user_address" id="user_address" v-model="formData.user_address"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
                  placeholder=" " required/>
-          <label for="floating_address"
+          <label for="user_address"
                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300
                    transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0
                    rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
                    peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
                    peer-focus:-translate-y-6">Адреса</label>
-          <ErrorMessage class="text-red-700" name="floating_address"/>
+          <ErrorMessage class="text-red-700" name="user_address"/>
         </div>
         <div class="relative z-0 w-full mb-6 group">
-          <Field type="text"  name="floating_town" id="floating_town" v-model="formData.floating_town"
+          <Field type="text"  name="user_town" id="user_town" v-model="formData.user_town"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
                  placeholder=" " required/>
-          <label for="floating_town"
+          <label for="user_town"
                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300
                    transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0
                    rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
                    peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
                    peer-focus:-translate-y-6">Місто</label>
-          <ErrorMessage class="text-red-700" name="floating_town"/>
+          <ErrorMessage class="text-red-700" name="user_town"/>
         </div>
         <div class="relative z-0 w-full mb-6 group">
-          <Field type="tel"  name="floating_index"  id="floating_index" v-model="formData.floating_index"
+          <Field type="tel"  name="almost_index"  id="almost_index" v-model="formData.almost_index"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
                  placeholder=" " required/>
-          <label for="floating_index"
+          <label for="almost_index"
                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300
                    transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0
                    rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
                    peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
                    peer-focus:-translate-y-6">Поштовий індекс</label>
-          <ErrorMessage class="text-red-700" name="floating_index"/>
+          <ErrorMessage class="text-red-700" name="almost_index"/>
         </div>
         <div class="text-center">
           <button type="submit"
@@ -154,32 +154,32 @@
         </div>
         <div class="grid md:grid-cols-2 md:gap-6">
           <div class="relative z-0 w-full mb-6 group">
-            <Field type="text" name="fast_first_name" id="fast_first_name" v-model="fastFormData.fast_first_name"
+            <Field type="text" name="user_first_name" id="user_first_name" v-model="fastFormData.user_first_name"
                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
                    placeholder=" " required/>
-            <label for="fast_first_name"
+            <label for="user_first_name"
                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300
                    transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0
                    rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
                    peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
                    peer-focus:-translate-y-6">Вкажіть Ваше Ім'я</label>
-            <ErrorMessage class="text-red-700" name="fast_first_name"/>
+            <ErrorMessage class="text-red-700" name="user_first_name"/>
           </div>
           <div class="relative z-0 w-full mb-6 group">
-            <Field type="tel" name="fast_phone" id="fast_phone" v-model="fastFormData.fast_phone"
+            <Field type="tel" name="user_phone" id="user_phone" v-model="fastFormData.user_phone"
                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
                    placeholder=" " required/>
-            <label for="fast_phone"
+            <label for="user_phone"
                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300
                    transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0
                    rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
                    peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
                    peer-focus:-translate-y-6">Введіть Ваш телефон</label>
-            <ErrorMessage class="text-red-700" name="fast_phone"/>
+            <ErrorMessage class="text-red-700" name="user_phone"/>
           </div>
         </div>
         <div class="text-center">
@@ -244,46 +244,46 @@ import { collection, addDoc } from 'firebase/firestore';
 import { db } from "../firebaseConfig.js";
 
 const formData = ref({
-  floating_email: '',
-  floating_first_name: '',
-  floating_last_name: '',
-  floating_phone: '',
-  floating_number: '',
-  floating_address: '',
-  floating_town: '',
-  floating_index: '',
+  user_email: '',
+  user_first_name: '',
+  user_last_name: '',
+  user_phone: '',
+  department_almost: '',
+  user_address: '',
+  user_town: '',
+  almost_index: '',
   products: [],
   totalPrice: 0,
 });
 const fastFormData = ref({
-  fast_first_name: '',
-  fast_phone: '',
+  user_first_name: '',
+  user_phone: '',
   products: [],
   totalPrice: 0,
 });
 
 const schema = yup.object({
-  floating_email: yup.string().email('Некоректний e-mail').required('Це поле має бути заповнене'),
-  floating_first_name: yup.string().matches(/^[a-zA-ZА-Яа-яЁё\s\-']+$/, 'Введіть справжнє ім\'я')
+  user_email: yup.string().email('Некоректний e-mail').required('Це поле має бути заповнене'),
+  user_first_name: yup.string().matches(/^[a-zA-ZА-Яа-яЁё\s\-']+$/, 'Введіть справжнє ім\'я')
       .max(15).required('Це поле має бути заповнене'),
-  floating_last_name: yup.string().matches(/^[a-zA-ZА-Яа-яЁё\s\-']+$/, 'Введіть справжнє ім\'я')
+  user_last_name: yup.string().matches(/^[a-zA-ZА-Яа-яЁё\s\-']+$/, 'Введіть справжнє ім\'я')
       .max(15).required('Це поле має бути заповнене'),
-  floating_phone: yup.string()
+  user_phone: yup.string()
       .matches(/^(\+380\d{9}|0\d{9})$/, 'Введіть коректний номер мобільного телефону')
       .required('Це поле має бути заповнене'),
-  floating_number: yup.string()
+  department_almost: yup.string()
       .matches(/^\d{1,3}$/, 'Введіть коректний номер відділення Нової Пошти')
       .required('Це поле має бути заповнене'),
-  floating_address: yup.string().required('Це поле має бути заповнене'),
-  floating_town: yup.string().required('Це поле має бути заповнене'),
-  floating_index: yup.string()
+  user_address: yup.string().required('Це поле має бути заповнене'),
+  user_town: yup.string().required('Це поле має бути заповнене'),
+  almost_index: yup.string()
       .matches(/^\d{1,5}$/, 'Введіть коректний Поштовий індекс')
       .required('Це поле має бути заповнене'),
 });
 const fast_schema = yup.object({
-  fast_first_name: yup.string().matches(/^[a-zA-ZА-Яа-яЁё\s\-']+$/, 'Введіть справжнє ім\'я')
+  user_first_name: yup.string().matches(/^[a-zA-ZА-Яа-яЁё\s\-']+$/, 'Введіть справжнє ім\'я')
       .max(15).required('Це поле має бути заповнене'),
-  fast_phone: yup.string()
+  user_phone: yup.string()
       .matches(/^(\+380\d{9}|0\d{9})$/, 'Введіть коректний номер мобільного телефону')
       .required('Це поле має бути заповнене'),
 });
