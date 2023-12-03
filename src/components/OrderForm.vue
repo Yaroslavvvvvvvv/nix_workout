@@ -148,43 +148,43 @@
       </Form>
     </div>
     <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
-      <Form v-show="activeTab === 'noRegistration'" :validation-schema="schema" @submit="onSubmit">
+      <Form v-show="activeTab === 'noRegistration'" :validation-schema="fast_schema" @submit="onFastSubmit">
         <div class="text-center">
           <h3 class="font-bold mb-2">ЗАМОВИТИ БЕЗ ОФОРМЛЕННЯ:</h3>
         </div>
         <div class="grid md:grid-cols-2 md:gap-6">
           <div class="relative z-0 w-full mb-6 group">
-            <Field type="text" name="floating_first_name" id="floating_first_name" v-model="formData.floating_first_name"
+            <Field type="text" name="fast_first_name" id="fast_first_name" v-model="fastFormData.fast_first_name"
                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
                    placeholder=" " required/>
-            <label for="floating_first_name"
+            <label for="fast_first_name"
                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300
                    transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0
                    rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
                    peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
                    peer-focus:-translate-y-6">Вкажіть Ваше Ім'я</label>
-            <ErrorMessage class="text-red-700" name="floating_first_name"/>
+            <ErrorMessage class="text-red-700" name="fast_first_name"/>
           </div>
           <div class="relative z-0 w-full mb-6 group">
-            <Field type="tel" name="floating_phone" id="floating_phone" v-model="formData.floating_phone"
+            <Field type="tel" name="fast_phone" id="fast_phone" v-model="fastFormData.fast_phone"
                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
                    placeholder=" " required/>
-            <label for="floating_phone"
+            <label for="fast_phone"
                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300
                    transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0
                    rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
                    peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
                    peer-focus:-translate-y-6">Введіть Ваш телефон</label>
-            <ErrorMessage class="text-red-700" name="floating_phone"/>
+            <ErrorMessage class="text-red-700" name="fast_phone"/>
           </div>
         </div>
         <div class="text-center">
           <button type="submit"
-                  @click.prevent="onSubmit"
+                  @click.prevent="onFastSubmit"
                   class="text-white bg-gray-600 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300
                 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600
                 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -254,6 +254,12 @@ const formData = ref({
   products: [],
   totalPrice: 0,
 });
+const fastFormData = ref({
+  fast_first_name: '',
+  fast_phone: '',
+  products: [],
+  totalPrice: 0,
+});
 
 const schema = yup.object({
   floating_email: yup.string().email('Некоректний e-mail').required('Це поле має бути заповнене'),
@@ -273,6 +279,13 @@ const schema = yup.object({
       .matches(/^\d{1,5}$/, 'Введіть коректний Поштовий індекс')
       .required('Це поле має бути заповнене'),
 });
+const fast_schema = yup.object({
+  fast_first_name: yup.string().matches(/^[a-zA-ZА-Яа-яЁё\s\-']+$/, 'Введіть справжнє ім\'я')
+      .max(15).required('Це поле має бути заповнене'),
+  fast_phone: yup.string()
+      .matches(/^(\+380\d{9}|0\d{9})$/, 'Введіть коректний номер мобільного телефону')
+      .required('Це поле має бути заповнене'),
+});
 
 const onSubmit = async () => {
   try {
@@ -290,6 +303,32 @@ const onSubmit = async () => {
 
     // Выводим данные в консоль
     console.log('Данные для оформления заказа:', formData.value);
+    // Ваша логика для отправки данных на сервер или других действий
+  } catch (error) {
+    if (error instanceof yup.ValidationError) {
+      // Обработка ошибок валидации
+      console.error('Ошибки валидации формы заказа:', error.errors);
+    } else {
+      console.error('Произошла ошибка:', error);
+    }
+  }
+};
+const onFastSubmit = async () => {
+  try {
+    // Валидация данных с использованием Yup
+    await fast_schema.validate(fastFormData.value, { abortEarly: false });
+
+    // Добавляем информацию о товарах в formData
+    fastFormData.value.products = store.state.cart.map((product) => ({
+      name: product.name,
+      price: product.price,
+    }));
+
+    // Обновляем общую стоимость в formData
+    fastFormData.value.totalPrice = totalPrice.value;
+
+    // Выводим данные в консоль
+    console.log('Данные для оформления заказа:', fastFormData.value);
     // Ваша логика для отправки данных на сервер или других действий
   } catch (error) {
     if (error instanceof yup.ValidationError) {
