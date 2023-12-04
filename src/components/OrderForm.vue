@@ -306,6 +306,7 @@ const onSubmit = async () => {
     const docRef = await addDoc(ordersCollection, formData.value);
     await push('/successful_order');
     await store.dispatch('clearCart');
+    localStorage.removeItem('cart');
     console.log('Дані для оформлення замовлення:', docRef.id);
   } catch (error) {
     if (error instanceof yup.ValidationError) {
@@ -331,6 +332,7 @@ const onFastSubmit = async () => {
     const docRef = await addDoc(fastOrdersCollection, fastFormData.value);
     await push('/successful_order');
     await store.dispatch('clearCart');
+    localStorage.removeItem('cart');
     console.log('Дані для оформлення швидкого замовлення:', docRef.id);
     // Ваша логика для отправки данных на сервер или других действий
   } catch (error) {
