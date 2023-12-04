@@ -20,6 +20,9 @@ const store = createStore({
             state.cart = savedCart;
             state.cartItemCount = savedCart.length;
         },
+        CLEAR_CART(state) {
+            state.cart = [];
+        },
     },
     actions: {
         addToCart({commit}, product) {
@@ -41,6 +44,9 @@ const store = createStore({
                 console.error('Error initializing cart:', error);
                 throw error;
             }
+        },
+        clearCart({ commit }) {
+            commit('CLEAR_CART');
         },
     },
     getters: {

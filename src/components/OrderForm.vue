@@ -22,18 +22,18 @@
           <h3 class="font-bold mb-2">ОСОБИСТІ ДАНІ:</h3>
         </div>
         <div class="relative z-0 w-full mb-6 group">
-          <Field  type="email" name="user_email" id="user_email" v-model="formData.user_email"
-                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
+          <Field type="email" name="user_email" id="user_email" v-model="formData.user_email"
+                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
-                  placeholder=" " required/>
+                 placeholder=" " required/>
           <label for="user_email"
                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform
                  -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4
                  rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500
                  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75
                  peer-focus:-translate-y-6">Вкажіть Ваш E-mail</label>
-          <ErrorMessage class="text-red-700" name="user_email" />
+          <ErrorMessage class="text-red-700" name="user_email"/>
         </div>
         <div class="grid md:grid-cols-2 md:gap-6">
           <div class="relative z-0 w-full mb-6 group">
@@ -67,7 +67,7 @@
         </div>
 
         <div class="relative z-0 w-full mb-6 group">
-          <Field type="tel"  name="user_phone" id="user_phone" v-model="formData.user_phone"
+          <Field type="tel" name="user_phone" id="user_phone" v-model="formData.user_phone"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -81,7 +81,7 @@
           <ErrorMessage class="text-red-700" name="user_phone"/>
         </div>
         <div class="relative z-0 w-full mb-6 group">
-          <Field type="text"  name="department_almost" id="department_almost" v-model="formData.department_almost"
+          <Field type="text" name="department_almost" id="department_almost" v-model="formData.department_almost"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -95,7 +95,7 @@
           <ErrorMessage class="text-red-700" name="department_almost"/>
         </div>
         <div class="relative z-0 w-full mb-6 group">
-          <Field type="text"  name="user_address" id="user_address" v-model="formData.user_address"
+          <Field type="text" name="user_address" id="user_address" v-model="formData.user_address"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -109,7 +109,7 @@
           <ErrorMessage class="text-red-700" name="user_address"/>
         </div>
         <div class="relative z-0 w-full mb-6 group">
-          <Field type="text"  name="user_town" id="user_town" v-model="formData.user_town"
+          <Field type="text" name="user_town" id="user_town" v-model="formData.user_town"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -123,7 +123,7 @@
           <ErrorMessage class="text-red-700" name="user_town"/>
         </div>
         <div class="relative z-0 w-full mb-6 group">
-          <Field type="tel"  name="almost_index"  id="almost_index" v-model="formData.almost_index"
+          <Field type="tel" name="almost_index" id="almost_index" v-model="formData.almost_index"
                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                   focus:ring-0 focus:border-blue-600 peer"
@@ -238,13 +238,13 @@
 <script setup>
 import {computed, ref} from 'vue';
 import {useStore} from 'vuex';
-import { Field, Form, ErrorMessage } from 'vee-validate';
+import {Field, Form, ErrorMessage} from 'vee-validate';
 import * as yup from 'yup';
-import { collection, addDoc } from 'firebase/firestore';
-import { db } from "../firebaseConfig.js";
-import {  useRouter } from 'vue-router';
+import {collection, addDoc} from 'firebase/firestore';
+import {db} from "../firebaseConfig.js";
+import {useRouter} from 'vue-router';
 
-const { push } = useRouter();
+const {push} = useRouter();
 const formData = ref({
   user_email: '',
   user_first_name: '',
@@ -266,9 +266,9 @@ const fastFormData = ref({
 
 const schema = yup.object({
   user_email: yup.string().email('Некоректний e-mail').required('Це поле має бути заповнене'),
-  user_first_name: yup.string().matches(/^[a-zA-ZА-Яа-яЁё\s\-']+$/, 'Введіть справжнє ім\'я')
+  user_first_name: yup.string().matches(/^[a-zA-ZА-Яа-яЁёІі\s\-']+$/, 'Введіть справжнє ім\'я')
       .max(15).required('Це поле має бути заповнене'),
-  user_last_name: yup.string().matches(/^[a-zA-ZА-Яа-яЁё\s\-']+$/, 'Введіть справжнє ім\'я')
+  user_last_name: yup.string().matches(/^[a-zA-ZА-Яа-яЁёІі\s\-']+$/, 'Введіть справжнє ім\'я')
       .max(15).required('Це поле має бути заповнене'),
   user_phone: yup.string()
       .matches(/^(\+380\d{9}|0\d{9})$/, 'Введіть коректний номер мобільного телефону')
@@ -283,7 +283,7 @@ const schema = yup.object({
       .required('Це поле має бути заповнене'),
 });
 const fast_schema = yup.object({
-  user_first_name: yup.string().matches(/^[a-zA-ZА-Яа-яЁё\s\-']+$/, 'Введіть справжнє ім\'я')
+  user_first_name: yup.string().matches(/^[a-zA-ZА-Яа-яЁёІі\s\-']+$/, 'Введіть справжнє ім\'я')
       .max(15).required('Це поле має бути заповнене'),
   user_phone: yup.string()
       .matches(/^(\+380\d{9}|0\d{9})$/, 'Введіть коректний номер мобільного телефону')
@@ -293,7 +293,7 @@ const fast_schema = yup.object({
 const onSubmit = async () => {
   try {
     // Валидация данных с использованием Yup
-    await schema.validate(formData.value, { abortEarly: false });
+    await schema.validate(formData.value, {abortEarly: false});
 
     // Добавляем информацию о товарах в formData
     formData.value.products = store.state.cart.map((product) => ({
@@ -305,6 +305,7 @@ const onSubmit = async () => {
     const ordersCollection = collection(db, 'orders');
     const docRef = await addDoc(ordersCollection, formData.value);
     await push('/successful_order');
+    await store.dispatch('clearCart');
     console.log('Дані для оформлення замовлення:', docRef.id);
   } catch (error) {
     if (error instanceof yup.ValidationError) {
@@ -317,7 +318,7 @@ const onSubmit = async () => {
 const onFastSubmit = async () => {
   try {
     // Валидация данных с использованием Yup
-    await fast_schema.validate(fastFormData.value, { abortEarly: false });
+    await fast_schema.validate(fastFormData.value, {abortEarly: false});
 
     // Добавляем информацию о товарах в formData
     fastFormData.value.products = store.state.cart.map((product) => ({
@@ -329,6 +330,7 @@ const onFastSubmit = async () => {
     const fastOrdersCollection = collection(db, 'fast_orders');
     const docRef = await addDoc(fastOrdersCollection, fastFormData.value);
     await push('/successful_order');
+    await store.dispatch('clearCart');
     console.log('Дані для оформлення швидкого замовлення:', docRef.id);
     // Ваша логика для отправки данных на сервер или других действий
   } catch (error) {
