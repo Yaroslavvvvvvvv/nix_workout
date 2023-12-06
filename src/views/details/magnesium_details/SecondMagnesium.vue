@@ -10,11 +10,40 @@
       </div>
       <div class="flex flex-col gap-4 lg:w-2/4">
         <div>
-          <h1 class="text-3xl font-bold">{{ productData.name }}</h1>
+          <h1 class="text-3xl xl:text-4xl lg:text-4xl md:text-4xl sm:text-4xl font-semibold text-gray-950">
+            {{ productData.name }}</h1>
         </div>
-        <p class="text-gray-700">
-          Con un'ammortizzazione incredibile per sostenerti in tutti i tuoi chilometri, Invincible 3 offre un livello di comfort elevatissimo sotto il piede per aiutarti a dare il massimo oggi, domani e oltre. Questo modello incredibilmente elastico e sostenitivo, è pensato per dare il massimo lungo il tuo percorso preferito e fare ritorno a casa carico di energia, in attesa della prossima corsa.
-        </p>
+        <p class="text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-bold">
+          Основна перевага рідкої магнезії над порошкової - це відсутність пилу (не потрапляє в дихальні шляхи),
+          до складу нашої магнезії також входить антисептик</p>
+        <p class="text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-bold">
+          В процесі тренування менше брудниться одяг, якщо порівнювати з сухою магнезією</p>
+        <p class="text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-bold">
+          Легкість в транспортуванні, зручна пляшка яку можна носити навіть в кишені</p>
+        <p class="text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-semibold">
+          Використовується для:</p>
+        <ul>
+          <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
+            - Кросфіту
+          </li>
+          <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
+            - Пауерліфтингу
+          </li>
+          <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
+            - Стріт воркауту
+          </li>
+          <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
+            - Пол денсу
+          </li>
+          <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
+            - Стріт ліфтингу
+          </li>
+          <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
+            - Тренувань у тренажерному залі
+          </li>
+        </ul>
+        <p class="text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-bold">
+          Міцний хват - запорука успішного тренування і  стабільного прогресу</p>
         <h6 class="text-2xl font-semibold">{{productData.price}} грн</h6>
         <div class="flex flex-row items-center gap-12 flex-wrap">
           <button
