@@ -10,11 +10,65 @@
       </div>
       <div class="flex flex-col gap-4 lg:w-2/4">
         <div>
-          <h1 class="text-3xl font-bold">{{ productData.name }}</h1>
+          <h1 class="mb-2 text-3xl xl:text-4xl lg:text-4xl md:text-4xl sm:text-4xl font-semibold text-gray-950">
+            {{ productData.name }}</h1>
         </div>
-        <p class="text-gray-700">
-          Con un'ammortizzazione incredibile per sostenerti in tutti i tuoi chilometri, Invincible 3 offre un livello di comfort elevatissimo sotto il piede per aiutarti a dare il massimo oggi, domani e oltre. Questo modello incredibilmente elastico e sostenitivo, è pensato per dare il massimo lungo il tuo percorso preferito e fare ritorno a casa carico di energia, in attesa della prossima corsa.
-        </p>
+        <p class="text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-semibold">
+          Максимально стабільна і міцна конструкція:</p>
+        <ul>
+          <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
+            - вага 21 кг
+          </li>
+          <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
+            - профіль 40*40
+          </li>
+        </ul>
+        <p class="text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-bold">
+          Виготовлені з грубостінного металу</p>
+        <ul>
+          <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
+            - довжина кожної нижньої опори
+            80 см
+          </li>
+        </ul>
+        <p class="mb-2 text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-semibold">
+          Завдяки чому на брусах можна виконувати будь-які вправи. Стійка на одній  руці, віджимання, вихід в стійку
+          махом, підняття ніг на прес, навіть сальто. При цьому не боятись що конструкція впаде.</p>
+        <ul>
+          <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
+            -  витримують навантаження в 300 кг
+          </li>
+        </ul>
+        <p class="text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-semibold">
+          Максимально зручні для будь-якого виду тренувань:</p>
+        <ul>
+          <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
+            - ручка діаметром 40 мм і довжиною 80 см
+          </li>
+          <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
+            - спеціальне порошкове покриття
+          </li>
+        </ul>
+        <p class="text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-semibold">
+          Зручність і вигода в транспортуванні:</p>
+        <ul>
+          <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
+            - розбірна конструкція
+          </li>
+          <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
+            - використовуємо унікальні п - подібний спосіб кріплення
+          </li>
+        </ul>
+        <p class="text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-semibold">
+          Резинові ніжки мають два ефекти:</p>
+        <ul>
+          <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
+            - зменшують скользіння по будь якій поверхні
+          </li>
+          <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
+            - завдяки ним бруси не шрамують підлогу
+          </li>
+        </ul>
         <h6 class="text-2xl font-semibold">{{productData.price}} грн</h6>
         <div class="flex flex-row items-center gap-12 flex-wrap">
           <button
