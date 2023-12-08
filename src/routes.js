@@ -287,6 +287,11 @@ const routes = [
         component: () => import('./views/details/bandages_details/Yellow.vue')
     },
     {
+        path: '/fire',
+        name: 'fire',
+        component: () => import('./views/details/bandages_details/Fire.vue')
+    },
+    {
         path: '/toxic',
         name: 'toxic',
         component: () => import('./views/details/bandages_details/Toxic.vue')
