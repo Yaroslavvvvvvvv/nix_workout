@@ -116,14 +116,14 @@
               </div>
             </router-link>
             <div class="flex flex-col space-y-4 md:space-y-8 mt-4 md:mt-0">
-              <router-link to="/rubber">
+              <router-link to="/wooden_paralets">
                 <div class="relative group flex justify-center items-center h-full w-full">
                   <img class="object-center object-cover h-full w-full"
-                       src="/images/catalog/men_rubber.jpg" alt="shoe-image"/>
+                       src="/images/catalog/men_woods_paralets.jpg" alt="shoe-image"/>
                   <button
                       class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10
                     absolute text-base font-medium leading-none text-gray-800 py-3 w-36 bg-white">
-                    Петлі
+                    Дерев’яні
                   </button>
                   <div
                       class="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20
