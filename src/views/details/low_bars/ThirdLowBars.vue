@@ -17,26 +17,20 @@
           Максимально стабільна і міцна конструкція:</p>
         <ul>
           <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
-            - вага 19 кг
+            - вага 21 кг
           </li>
           <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
             - профіль 40*40
           </li>
-        </ul>
-        <p class="text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-bold">
-          Виготовлені з грубостінного металу</p>
-        <ul>
           <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
-            - довжина кожної нижньої опори
-            80 см
+            - довжина кожної нижньої опори 80 см
           </li>
         </ul>
         <p class="mb-2 text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-semibold">
-          Завдяки чому на брусах можна виконувати будь-які вправи. Стійка на одній  руці, віджимання, вихід в стійку
-          махом, підняття ніг на прес, навіть сальто. При цьому не боятись що конструкція впаде.</p>
+          Завдяки чому на брусах можна виконувати любі вправи і при цьому не боятись що конструкція впаде.</p>
         <ul>
           <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
-            -  витримують навантаження в 300 кг
+            - допустиме навантаження 300+ кг
           </li>
         </ul>
         <p class="text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-semibold">
@@ -52,11 +46,12 @@
         <p class="text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-semibold">
           Зручність і вигода в транспортуванні:</p>
         <ul>
-          <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
+          <li class="mb-2 text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
             - розбірна конструкція
           </li>
           <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
-            - використовуємо унікальні п - подібний спосіб кріплення
+            - використовуємо унікальні п-подібний спосіб кріплення продуманий так, що після збірки бруси мають таку
+            саму міцність і жорсткість немов суцільно зварені
           </li>
         </ul>
         <p class="text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-semibold">

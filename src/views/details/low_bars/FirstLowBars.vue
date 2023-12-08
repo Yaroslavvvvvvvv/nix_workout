@@ -13,11 +13,7 @@
           <h1 class="mb-2 text-3xl xl:text-4xl lg:text-4xl md:text-4xl sm:text-4xl font-semibold text-gray-950">
             {{ productData.name }}</h1>
           <p class="text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-bold">
-            Переносні бруси з якими тренування вийдуть на зовсім інший рівень</p>
-          <p class="text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-semibold">
-            Повністю розбірна конструкція</p>
-          <p class="text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-semibold">
-            Забезпечує мобільність в транспортуванні і зберіганні</p>
+            З можливістю регулювання висоти</p>
         </div>
         <p class="text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-semibold">
           Регулювання висоти:</p>
@@ -29,8 +25,10 @@
             - 90 см
           </li>
         </ul>
-        <p class="text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-bold">
-          Виготовлені з грубостінного металу</p>
+        <p class="mb-2 text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-semibold">
+          Ніжки довжиною 95 см</p>
+        <p class="mb-2 text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-semibold">
+          Забезпечують максимальну стабільність при будь яких вправах</p>
         <ul>
           <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
             - діаметр ручки 42 мм
@@ -42,27 +40,18 @@
             - вага 25кг +-1
           </li>
         </ul>
-        <p class="mb-2 text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-semibold">
-          Завдяки чому на брусах можна виконувати будь-які вправи. Стійка на одній  руці, віджимання, вихід в стійку
-          махом, підняття ніг на прес, навіть сальто. При цьому не боятись що конструкція впаде.</p>
         <p class="text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-semibold">
-          Максимально зручні для будь-якого виду тренувань:</p>
+          Допустиме навантаження 300 +кг</p>
         <ul>
-          <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
-            -  допустиме навантаження 300 +кг
+          <li class="mb-2 text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
+            - використовуємо унікальні п-подібний спосіб кріплення продуманий так , що після збірки бруси мають таку
+            саму міцність і жорсткість немов суцільно зварені
+          </li>
+          <li class="mb-2 text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
+            - повністю розбірна конструкція, забезпечує мобільність в транспортуванні і зберіганні
           </li>
           <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
-            - спеціальне порошкове покриття
-          </li>
-        </ul>
-        <p class="text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-semibold">
-          Резинові ніжки мають два ефекти:</p>
-        <ul>
-          <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
-            - зменшують скользіння по будь якій поверхні
-          </li>
-          <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
-            - завдяки ним бруси не шрамують підлогу
+            - резинові ніжки дають міцне зчеплення з підлогою і не шрамують її
           </li>
         </ul>
         <h6 class="text-2xl font-semibold">{{productData.price}} грн</h6>
