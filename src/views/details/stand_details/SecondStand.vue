@@ -10,11 +10,32 @@
       </div>
       <div class="flex flex-col gap-4 lg:w-2/4">
         <div>
-          <h1 class="text-3xl font-bold">{{ productData.name }}</h1>
+          <h1 class="text-3xl xl:text-4xl lg:text-4xl md:text-4xl sm:text-4xl font-semibold text-gray-950">
+            {{ productData.name }}</h1>
         </div>
-        <p class="text-gray-700">
-          Con un'ammortizzazione incredibile per sostenerti in tutti i tuoi chilometri, Invincible 3 offre un livello di comfort elevatissimo sotto il piede per aiutarti a dare il massimo oggi, domani e oltre. Questo modello incredibilmente elastico e sostenitivo, è pensato per dare il massimo lungo il tuo percorso preferito e fare ritorno a casa carico di energia, in attesa della prossima corsa.
-        </p>
+        <ul>
+          <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
+            - вага 14 кг
+          </li>
+          <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
+            - допустиме навантаження 200 + кг
+          </li>
+          <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
+            - діаметр ручки 42 мм
+          </li>
+          <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
+            - ніжки довжиною 95 см забезпечують максимальну стабільність
+          </li>
+          <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
+            - унікальні п-подібні кріплення по міцності і жорсткості ідентичні до суцільної зварки
+          </li>
+          <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
+            - резинові ніжки не шрамують підлогу
+          </li>
+          <li class="text-base xl:text-lg lg:text-lg md:text-lg sm:text-lg leading-7 text-gray-500">
+            - порошкове покриття з ефектом наждачки
+          </li>
+        </ul>
         <h6 class="text-2xl font-semibold">{{productData.price}} грн</h6>
         <div class="flex flex-row items-center gap-12 flex-wrap">
           <button
