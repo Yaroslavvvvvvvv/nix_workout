@@ -64,7 +64,7 @@ export default {
   data() {
     return {
       imagesMini: {
-        img1: "/images/products/liquid_magnesium.jpg",
+        img1: "/images/products/liquid_magnesium_small.webp",
         img2: "/images/magnesium_details/third_magnesium.jpg",
         img3: "/images/magnesium_details/fourth_magnesium.jpg",},
       productData: {},
