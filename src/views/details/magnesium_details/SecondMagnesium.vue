@@ -14,7 +14,7 @@
             {{ productData.name }}</h1>
         </div>
         <p class="text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-bold">
-          Основна перевага рідкої магнезії над порошкової - це відсутність пилу (не потрапляє в дихальні шляхи),
+          Основна перевага рідкої магнезії над порошкової - це відсутність пилу (не потрапляє в дихальні шляхи) ,
           до складу нашої магнезії також входить антисептик</p>
         <p class="text-base xl:text-xl lg:text-xl md:text-xl sm:text-xl leading-7 text-gray-600 font-bold">
           В процесі тренування менше брудниться одяг, якщо порівнювати з сухою магнезією</p>
