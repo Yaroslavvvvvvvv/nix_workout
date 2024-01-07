@@ -12,7 +12,7 @@ export default {
                 libre: ['Libre Baskerville', 'serif'],
             },
             backgroundImage: {
-                'bg_img': "url('/images/about_img.jpg')"
+                'bg_img': "url('/images/about_img.webp')"
             },
             extend: {
                 'bg-bg_img': {

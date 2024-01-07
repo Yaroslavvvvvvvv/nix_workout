@@ -19,7 +19,7 @@ const cartItemCount = computed(() => store.getters.cartItemCount);
 
 
 <template>
-  <header class="sticky top-0 bg-gray-700/90 z-10">
+  <header class="sticky top-0 bg-gray-800/90 z-10">
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 animate-fade-down animate-duration-1000"
          aria-label="Global">
       <div class="flex lg:flex-1">

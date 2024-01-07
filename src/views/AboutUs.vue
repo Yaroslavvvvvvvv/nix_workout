@@ -8,7 +8,7 @@
       <div class="flex flex-wrap ">
         <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
           <div class="relative lg:max-w-md">
-            <img src="/images/about_img.jpg" alt="aboutimage"
+            <img src="/images/about_img.webp" alt="aboutimage"
                  class="relative z-10 object-cover w-full rounded h-96">
             <div
                 class="absolute bottom-0 right-0 z-10 p-8 bg-white border-4 border-gray-100 rounded shadow
